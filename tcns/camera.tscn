@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfxgmkwd4wrn7"]
+
+[ext_resource type="Texture2D" uid="uid://dcc4q8uumtybx" path="res://sprites/camera-verde.png" id="1_7uhdl"]
+[ext_resource type="Texture2D" uid="uid://b68287mvt8ey2" path="res://sprites/camera-vermelha.png" id="2_vjpf2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmxf7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7uhdl")
+}],
+"loop": true,
+"name": &"green",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vjpf2")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}]
+
+[node name="camera" type="AnimatedSprite2D"]
+rotation = -1.5707964
+sprite_frames = SubResource("SpriteFrames_cmxf7")
+animation = &"green"
+autoplay = "red"
