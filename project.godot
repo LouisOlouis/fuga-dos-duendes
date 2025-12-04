@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="fuga dos duendes"
+run/main_scene="uid://dplj8n8n8ptqd"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=600
+window/size/viewport_height=300
 
 [rendering]
 
