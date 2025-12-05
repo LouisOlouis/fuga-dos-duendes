@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqrhmww01ye1o"]
+
+[ext_resource type="Texture2D" uid="uid://btplvfn58eh0o" path="res://sprites/duende.png" id="1_7mxcf"]
+[ext_resource type="Script" uid="uid://bsenro0lqfd3w" path="res://scripts/playerF.gd" id="1_iccjt"]
+[ext_resource type="Texture2D" uid="uid://b6qckgw1igwea" path="res://sprites/duende-de-costas.png" id="2_j0vao"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pd07"]
+size = Vector2(30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iip27"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j0vao")
+}],
+"loop": true,
+"name": &"costas",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7mxcf")
+}],
+"loop": true,
+"name": &"frente",
+"speed": 5.0
+}]
+
+[node name="PlayerF" type="CharacterBody2D"]
+script = ExtResource("1_iccjt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4pd07")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_iip27")
+animation = &"frente"
+autoplay = "frente"

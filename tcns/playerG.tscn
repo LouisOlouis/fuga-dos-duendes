@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pd07"]
 size = Vector2(30, 30)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="PlayerG" type="CharacterBody2D"]
 script = ExtResource("1_4pd07")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -24,3 +24,6 @@ offset = Vector2(10, 0)
 zoom = Vector2(2, 2)
 limit_left = 0
 limit_bottom = 450
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
