@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkciwg2nfghlf"
-path="res://.godot/imported/terra.png-f95f24602fcf0ebe4e387ecc03923452.ctex"
+uid="uid://bsldb5wgoirp2"
+path="res://.godot/imported/3 - Cloud_cover_1.png-e1eac2fb8b53b7a5bfd7d22203ed8839.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/terra.png"
-dest_files=["res://.godot/imported/terra.png-f95f24602fcf0ebe4e387ecc03923452.ctex"]
+source_file="res://sprites/Background parts/3 - Cloud_cover_1.png"
+dest_files=["res://.godot/imported/3 - Cloud_cover_1.png-e1eac2fb8b53b7a5bfd7d22203ed8839.ctex"]
 
 [params]
 

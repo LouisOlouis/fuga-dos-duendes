@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkciwg2nfghlf"
-path="res://.godot/imported/terra.png-f95f24602fcf0ebe4e387ecc03923452.ctex"
+uid="uid://b3hh1s5opdrja"
+path="res://.godot/imported/1 - Snowy_foreground_area.png-f1b0897166df01c06edae8f800017424.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/terra.png"
-dest_files=["res://.godot/imported/terra.png-f95f24602fcf0ebe4e387ecc03923452.ctex"]
+source_file="res://sprites/Background parts/1 - Snowy_foreground_area.png"
+dest_files=["res://.godot/imported/1 - Snowy_foreground_area.png-f1b0897166df01c06edae8f800017424.ctex"]
 
 [params]
 
