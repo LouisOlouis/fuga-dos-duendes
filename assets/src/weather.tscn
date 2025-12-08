@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://mf1aia5rtqp"]
+
+[ext_resource type="Script" uid="uid://regbkqblh146" path="res://assets/src/Weather.gd" id="1_m45y6"]
+
+[sub_resource type="CanvasItemMaterial" id="1"]
+particles_animation = true
+particles_anim_h_frames = 10
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="2"]
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector3(0, 1, 0)
+spread = 10.0
+gravity = Vector3(0, 10, 0)
+
+[sub_resource type="CanvasItemMaterial" id="3"]
+particles_animation = true
+particles_anim_h_frames = 10
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="4"]
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector3(0, 1, 0)
+spread = 5.0
+gravity = Vector3(0, 100, 0)
+
+[sub_resource type="CanvasItemMaterial" id="5"]
+blend_mode = 2
+
+[node name="Weather" type="Node2D"]
+script = ExtResource("1_m45y6")
+
+[node name="Snow" type="GPUParticles2D" parent="."]
+material = SubResource("1")
+emitting = false
+amount = 500
+lifetime = 10.0
+speed_scale = 0.5
+visibility_rect = Rect2(-100, -100, 200, 500)
+process_material = SubResource("2")
+
+[node name="Rain" type="GPUParticles2D" parent="."]
+material = SubResource("3")
+emitting = false
+amount = 1000
+lifetime = 5.0
+speed_scale = 0.5
+visibility_rect = Rect2(-100, -100, 200, 500)
+process_material = SubResource("4")
+
+[node name="Darkness" type="ColorRect" parent="."]
+material = SubResource("5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+color = Color(0, 0, 0, 1)
+
+[node name="Tween" type="Tween" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+script = null
