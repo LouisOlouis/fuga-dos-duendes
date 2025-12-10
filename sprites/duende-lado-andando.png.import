@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpfb8td8imcmc"
-path="res://.godot/imported/rain.png-2adc31274d8b0d640ee548cf99db2192.ctex"
+uid="uid://dkka25yukg6s6"
+path="res://.godot/imported/duende-lado-andando.png-bf5d5bbda288572dcbca4077e6419d40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/rain.png"
-dest_files=["res://.godot/imported/rain.png-2adc31274d8b0d640ee548cf99db2192.ctex"]
+source_file="res://sprites/duende-lado-andando.png"
+dest_files=["res://.godot/imported/duende-lado-andando.png-bf5d5bbda288572dcbca4077e6419d40.ctex"]
 
 [params]
 

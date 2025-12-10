@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yp3uivb8nsja"
-path="res://.godot/imported/snow.png-e41cbe96dc3664cb242ff6f550f7fa5c.ctex"
+uid="uid://cblbaim3xl7yl"
+path="res://.godot/imported/duende-de-costas-andando.png-c994b3ef96e293c205e19a0fc188ff75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/snow.png"
-dest_files=["res://.godot/imported/snow.png-e41cbe96dc3664cb242ff6f550f7fa5c.ctex"]
+source_file="res://sprites/duende-de-costas-andando.png"
+dest_files=["res://.godot/imported/duende-de-costas-andando.png-c994b3ef96e293c205e19a0fc188ff75.ctex"]
 
 [params]
 

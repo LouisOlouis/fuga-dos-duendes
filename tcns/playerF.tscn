@@ -1,21 +1,63 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqrhmww01ye1o"]
+[gd_scene load_steps=15 format=3 uid="uid://dqrhmww01ye1o"]
 
 [ext_resource type="Texture2D" uid="uid://btplvfn58eh0o" path="res://sprites/duende.png" id="1_7mxcf"]
 [ext_resource type="Script" uid="uid://bsenro0lqfd3w" path="res://scripts/playerF.gd" id="1_iccjt"]
-[ext_resource type="Texture2D" uid="uid://b6qckgw1igwea" path="res://sprites/duende-de-costas.png" id="2_j0vao"]
+[ext_resource type="Texture2D" uid="uid://cblbaim3xl7yl" path="res://sprites/duende-de-costas-andando.png" id="2_iip27"]
+[ext_resource type="Texture2D" uid="uid://dkka25yukg6s6" path="res://sprites/duende-lado-andando.png" id="4_iip27"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pd07"]
 size = Vector2(30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxgjc"]
+atlas = ExtResource("2_iip27")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1g1ww"]
+atlas = ExtResource("2_iip27")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t76p3"]
+atlas = ExtResource("2_iip27")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fge3"]
+atlas = ExtResource("2_iip27")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4puw"]
+atlas = ExtResource("4_iip27")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sf56"]
+atlas = ExtResource("4_iip27")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok4nv"]
+atlas = ExtResource("4_iip27")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikb3i"]
+atlas = ExtResource("4_iip27")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iip27"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_j0vao")
+"texture": SubResource("AtlasTexture_fxgjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g1ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t76p3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fge3")
 }],
-"loop": true,
+"loop": false,
 "name": &"costas",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -24,6 +66,23 @@ animations = [{
 "loop": true,
 "name": &"frente",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4puw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6sf56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok4nv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikb3i")
+}],
+"loop": false,
+"name": &"lado",
+"speed": 15.0
 }]
 
 [node name="PlayerF" type="CharacterBody2D"]
@@ -35,5 +94,5 @@ debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iip27")
-animation = &"frente"
+animation = &"costas"
 autoplay = "frente"

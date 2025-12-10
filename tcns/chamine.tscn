@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm4jglk8s6n1b"]
+
+[ext_resource type="Script" uid="uid://c3hb186t2j2ti" path="res://scripts/chamine.gd" id="1_v8ot6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlkxq"]
+size = Vector2(26, 41)
+
+[node name="chamine" type="Area2D"]
+script = ExtResource("1_v8ot6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tlkxq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
