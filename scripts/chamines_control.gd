@@ -10,7 +10,16 @@ var house = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if Globals.last_house == "0":
+		return
+
+	var marker_name := "M" + str(Globals.last_house)
+
+	if not has_node(marker_name):
+		push_error("Marker não existe: " + marker_name)
+		return
+
+	player_g.global_position = get_node(marker_name).global_position
 
 func _on__entered(obj: Variant) -> void:
 	print(obj.name)
@@ -25,6 +34,7 @@ func _on__entered(obj: Variant) -> void:
 
 
 func _on_entrar_pressed() -> void:
+	Globals.last_house = house
 	call_deferred("change_level")
 
 func change_level():

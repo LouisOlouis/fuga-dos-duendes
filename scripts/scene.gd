@@ -1,6 +1,8 @@
 extends Node2D
-@onready var color_rect: ColorRect = $CanvasLayer2/ColorRect
-@onready var canvas_layer_2: CanvasLayer = $CanvasLayer2
+@onready var color_rect: ColorRect = $start/ColorRect
+@onready var canvas_layer_2: CanvasLayer = $start
+
+var has_key:bool = false
 
 func _ready() -> void:
 	canvas_layer_2.visible = true
@@ -18,4 +20,7 @@ func _on_button_pressed() -> void:
 		get_tree().reload_current_scene()
 
 func _on_button_2_pressed() -> void:
-	pass # Replace with function body.
+	call_deferred("change_level")
+
+func change_level():
+	get_tree().change_scene_to_file("res://tcns/fases/DEVscene.tscn")

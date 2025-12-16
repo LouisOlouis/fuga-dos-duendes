@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dj8giv2m27bil"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_chyy4"]
-size = Vector2(16, 16)
 
 [node name="tester" type="Area2D"]
 collision_layer = 2
@@ -9,4 +8,4 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_chyy4")
-debug_color = Color(0, 0.6509804, 0.11372549, 0.1882353)
+debug_color = Color(2.8637796e-06, 0.6468061, 0.23558497, 0.41960785)

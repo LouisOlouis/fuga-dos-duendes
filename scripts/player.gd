@@ -10,6 +10,7 @@ var move = false
 
 
 func _physics_process(delta: float) -> void:
+	
 	if move:
 		return
 	

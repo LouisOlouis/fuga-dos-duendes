@@ -1,12 +1,8 @@
-[gd_scene load_steps=22 format=4 uid="uid://h53myux4lbh5"]
+[gd_scene load_steps=13 format=4 uid="uid://h53myux4lbh5"]
 
 [ext_resource type="Script" uid="uid://bw083dgh6ldky" path="res://scripts/scene.gd" id="1_x85js"]
-[ext_resource type="Texture2D" uid="uid://cwhfcv7rxu2pw" path="res://sprites/green-dark.png" id="2_2ftnh"]
-[ext_resource type="Texture2D" uid="uid://vhu0sub1hhrm" path="res://sprites/red.png" id="3_qt0jc"]
-[ext_resource type="Texture2D" uid="uid://cuvw7p1qci2p0" path="res://sprites/floor.png" id="4_etri3"]
-[ext_resource type="Texture2D" uid="uid://dahqeo2ryojiq" path="res://sprites/green.png" id="5_rlw8c"]
-[ext_resource type="Texture2D" uid="uid://cxn7fdwuh1x7p" path="res://sprites/houses.png" id="6_qnhm6"]
-[ext_resource type="Texture2D" uid="uid://qh2ps8f4vio7" path="res://sprites/wall.png" id="7_acdd3"]
+[ext_resource type="TileSet" uid="uid://cmvxick7uh3kv" path="res://etc/DEVscene.tres" id="2_x85js"]
+[ext_resource type="TileSet" uid="uid://bk0wyulv1wgj7" path="res://etc/fazes.tres" id="3_j6l6s"]
 [ext_resource type="PackedScene" uid="uid://dqrhmww01ye1o" path="res://tcns/playerF.tscn" id="8_toqq8"]
 [ext_resource type="PackedScene" uid="uid://dj8giv2m27bil" path="res://tcns/tester.tscn" id="9_6ayok"]
 [ext_resource type="FontFile" uid="uid://c4gbx4qpwu2fy" path="res://etc/at01.ttf" id="10_clivc"]
@@ -14,99 +10,8 @@
 [ext_resource type="StyleBox" uid="uid://b1d8ixu70hvik" path="res://etc/button pressed.tres" id="12_f0878"]
 [ext_resource type="StyleBox" uid="uid://dsevatp1duedv" path="res://etc/button hover.tres" id="13_u8535"]
 [ext_resource type="StyleBox" uid="uid://cxqth2e7dbfaf" path="res://etc/button disabled.tres" id="14_0833l"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7tjw"]
-texture = ExtResource("2_2ftnh")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aoopg"]
-texture = ExtResource("3_qt0jc")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlkxq"]
-texture = ExtResource("4_etri3")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_teipq"]
-texture = ExtResource("5_rlw8c")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5phn"]
-texture = ExtResource("6_qnhm6")
-texture_region_size = Vector2i(32, 32)
-1:4/0 = 0
-1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-2:4/0 = 0
-2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-2:3/0 = 0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-3:3/0 = 0
-3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-4:3/0 = 0
-4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-3:4/0 = 0
-3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-3:2/0 = 0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-4:2/0 = 0
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 5.00331, 0.018260956, -16, -16, -16, -16, 4.98505)
-0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.032348633, -16, 16, -16, 16, 5.01412, 0, 5.046469)
-1:6/0 = 0
-1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-2:6/0 = 0
-2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-3:6/0 = 0
-3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-4:6/0 = 0
-4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 5.00331, 0.018260956, -16, -16, -16, -16, 4.98505)
-4:7/0 = 0
-4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-3:7/0 = 0
-3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-3:8/0 = 0
-3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-2:8/0 = 0
-2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-1:7/0 = 0
-1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-2:7/0 = 0
-2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-1:8/0 = 0
-1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-0:6/0 = 0
-0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.032348633, -16, 16, -16, 16, 5.01412, 0, 5.046469)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_om3ik"]
-texture = ExtResource("7_acdd3")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-
-[sub_resource type="TileSet" id="TileSet_2wjab"]
-tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
-sources/3 = SubResource("TileSetAtlasSource_teipq")
-sources/0 = SubResource("TileSetAtlasSource_o7tjw")
-sources/1 = SubResource("TileSetAtlasSource_aoopg")
-sources/2 = SubResource("TileSetAtlasSource_tlkxq")
-sources/5 = SubResource("TileSetAtlasSource_y5phn")
-sources/7 = SubResource("TileSetAtlasSource_om3ik")
+[ext_resource type="PackedScene" uid="uid://udpgiymj5kro" path="res://tcns/key.tscn" id="16_etri3"]
+[ext_resource type="PackedScene" uid="uid://c3mossyooeuoc" path="res://tcns/duende_preso.tscn" id="17_rlw8c"]
 
 [node name="1" type="Node2D"]
 scale = Vector2(2, 2)
@@ -114,22 +19,27 @@ script = ExtResource("1_x85js")
 
 [node name="tilemap" type="Node2D" parent="."]
 
+[node name="block" type="TileMap" parent="tilemap"]
+tile_set = ExtResource("2_x85js")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458766, 1, 0, 393230, 1, 0, 393229, 1, 0, 393228, 1, 0, 327692, 1, 0, 327693, 1, 0, 196620, 1, 0, 262156, 1, 0, 196621, 1, 0, 262157, 1, 0, 196622, 1, 0, 262158, 1, 0, 327694, 1, 0, 131085, 1, 0, 131086, 1, 0, 13, 1, 0, 65549, 1, 0, 14, 1, 0, 65550, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 131081, 1, 0, 196617, 1, 0, 262153, 1, 0, 131082, 1, 0, 196618, 1, 0, 262154, 1, 0, 327689, 1, 0, 327690, 1, 0, 393223, 1, 0, 131078, 1, 0, 196614, 1, 0, 262150, 1, 0, 327686, 1, 0, 393222, 1, 0, 131079, 1, 0, 196615, 1, 0, 262151, 1, 0, 327687, 1, 0, 65539, 1, 0, 131075, 1, 0, 196611, 1, 0, 262147, 1, 0, 327683, 1, 0, 65540, 1, 0, 131076, 1, 0, 196612, 1, 0, 262148, 1, 0, 327684, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 65548, 0, 0)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="tilemap"]
-tile_map_data = PackedByteArray("AAAAAAAABwAAAAAAAAAAAAEABwAAAAAAAAAAAAIABwAAAAAAAAAAAAMABwAAAAAAAAAAAAQABwAAAAAAAAAAAAUABwAAAAEAAAABAAAABwAAAAEAAAABAAEAAgAAAAAAAAABAAIAAgAAAAAAAAABAAMAAgAAAAAAAAABAAQAAgAAAAAAAAABAAUAAgAAAAAAAAABAAYAAgAAAAAAAAACAAAABwAAAAEAAAACAAEAAgAAAAAAAAACAAIAAgAAAAAAAAACAAMAAgAAAAAAAAACAAQAAgAAAAAAAAACAAUAAgAAAAAAAAACAAYAAgAAAAAAAAADAAAABwAAAAEAAAADAAEAAgAAAAAAAAADAAIAAgAAAAAAAAADAAMAAgAAAAAAAAADAAQAAgAAAAAAAAADAAUAAgAAAAAAAAADAAYAAgAAAAAAAAAEAAAABwAAAAEAAAAEAAEAAgAAAAAAAAAEAAIAAgAAAAAAAAAEAAMAAgAAAAAAAAAEAAQAAgAAAAAAAAAEAAUAAgAAAAAAAAAEAAYAAgAAAAAAAAAFAAAABwAAAAEAAAAFAAEAAgAAAAAAAAAFAAIAAgAAAAAAAAAFAAMAAgAAAAAAAAAFAAQAAgAAAAAAAAAFAAUAAgAAAAAAAAAFAAYAAgAAAAAAAAAGAAAABwAAAAEAAAAGAAEAAgAAAAAAAAAGAAIAAgAAAAAAAAAGAAMAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAUAAgAAAAAAAAAGAAYAAgAAAAAAAAAHAAAABwAAAAEAAAAHAAEAAgAAAAAAAAAHAAIAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAYAAgAAAAAAAAAIAAAABwAAAAEAAAAIAAEAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAAIAAYAAgAAAAAAAAAJAAAABwAAAAEAAAAJAAEAAgAAAAAAAAAJAAIAAgAAAAAAAAAJAAMAAgAAAAAAAAAJAAQAAgAAAAAAAAAJAAUAAgAAAAAAAAAJAAYAAgAAAAAAAAAKAAAABwAAAAEAAAAKAAEAAgAAAAAAAAAKAAIAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAUAAgAAAAAAAAAKAAYAAgAAAAAAAAALAAAABwAAAAEAAAALAAEAAgAAAAAAAAALAAIAAgAAAAAAAAALAAMAAgAAAAAAAAALAAQAAgAAAAAAAAALAAUAAgAAAAAAAAALAAYAAgAAAAAAAAAMAAAABwAAAAEAAAAMAAEAAgAAAAAAAAAMAAIAAgAAAAAAAAAMAAMAAgAAAAAAAAAMAAQAAgAAAAAAAAAMAAUAAgAAAAAAAAAMAAYAAgAAAAAAAAANAAAABwAAAAAAAAANAAEABwAAAAAAAAANAAIABwAAAAAAAAANAAMABwAAAAAAAAANAAQABwAAAAAAAAANAAUABwAAAAEAAAANAAYABwAAAAEAAAAOAAAABwAAAAAAAAAOAAEABwAAAAAAAAAOAAIABwAAAAAAAAAOAAMABwAAAAAAAAAOAAQABwAAAAAAAAAOAAUABwAAAAEAAAAOAAYABwAAAAEAAAAOAAcABwAAAAAAAAANAAcABwAAAAAAAAAMAAcABwAAAAAAAAALAAcABwAAAAAAAAAKAAcABwAAAAAAAAAJAAcABwAAAAAAAAAIAAcABwAAAAAAAAAHAAcABwAAAAAAAAAGAAcABwAAAAAAAAAFAAcABwAAAAAAAAAEAAcABwAAAAAAAAADAAcABwAAAAAAAAACAAcABwAAAAAAAAABAAcABwAAAAAAAAAAAAcABwAAAAAAAAAAAAYABwAAAAEAAAD//wcAAgAAAAAAAAD//wYAAgAAAAAAAAD//wUAAgAAAAAAAAA=")
-tile_set = SubResource("TileSet_2wjab")
+tile_map_data = PackedByteArray("AAAAAAAABwAAAAAAAAAAAAEABwAAAAAAAAAAAAIABwAAAAAAAAAAAAMABwAAAAAAAAAAAAQABwAAAAAAAAAAAAUABwAAAAEAAAABAAAABwAAAAEAAAABAAEAAgAAAAAAAAABAAIAAgAAAAAAAAABAAMAAgAAAAAAAAABAAQAAgAAAAAAAAABAAUAAgAAAAAAAAABAAYAAgAAAAAAAAACAAAABwAAAAEAAAACAAEAAgAAAAAAAAACAAIAAgAAAAAAAAACAAMAAgAAAAAAAAACAAQAAgAAAAAAAAACAAUAAgAAAAAAAAACAAYAAgAAAAAAAAADAAAABwAAAAAAAAADAAEABwAAAAAAAAADAAIABwAAAAAAAAADAAMABwAAAAAAAAADAAQABwAAAAEAAAADAAUABwAAAAEAAAADAAYAAgAAAAAAAAAEAAAABwAAAAAAAAAEAAEABwAAAAAAAAAEAAIABwAAAAAAAAAEAAMABwAAAAAAAAAEAAQABwAAAAEAAAAEAAUABwAAAAEAAAAEAAYAAgAAAAAAAAAFAAAABwAAAAEAAAAFAAEAAgAAAAAAAAAFAAIAAgAAAAAAAAAFAAMAAgAAAAAAAAAFAAQAAgAAAAAAAAAFAAUAAgAAAAAAAAAFAAYAAgAAAAAAAAAGAAAABwAAAAEAAAAGAAEAAgAAAAAAAAAGAAMABwAAAAAAAAAGAAQABwAAAAAAAAAGAAUABwAAAAEAAAAGAAYABwAAAAEAAAAHAAAABwAAAAEAAAAHAAEAAgAAAAAAAAAHAAMABwAAAAAAAAAHAAQABwAAAAAAAAAHAAUABwAAAAEAAAAHAAYABwAAAAEAAAAIAAAABwAAAAEAAAAIAAEAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAAIAAYAAgAAAAAAAAAJAAAABwAAAAEAAAAJAAEAAgAAAAAAAAAJAAIABwAAAAAAAAAJAAMABwAAAAAAAAAJAAQABwAAAAEAAAAJAAUABwAAAAEAAAAJAAYAAgAAAAAAAAAKAAAABwAAAAEAAAAKAAEAAgAAAAAAAAAKAAIABwAAAAAAAAAKAAMABwAAAAAAAAAKAAQABwAAAAEAAAAKAAUABwAAAAEAAAAKAAYAAgAAAAAAAAALAAAABwAAAAEAAAALAAEAAgAAAAAAAAALAAIAAgAAAAAAAAALAAMAAgAAAAAAAAALAAQAAgAAAAAAAAALAAUAAgAAAAAAAAALAAYAAgAAAAAAAAAMAAAABwAAAAEAAAAMAAMABwAAAAAAAAAMAAQABwAAAAAAAAAMAAUABwAAAAEAAAAMAAYABwAAAAEAAAANAAAABwAAAAAAAAANAAEABwAAAAAAAAANAAIABwAAAAAAAAANAAMABwAAAAAAAAANAAQABwAAAAAAAAANAAUABwAAAAEAAAANAAYABwAAAAEAAAAOAAAABwAAAAAAAAAOAAEABwAAAAAAAAAOAAIABwAAAAAAAAAOAAMABwAAAAAAAAAOAAQABwAAAAAAAAAOAAUABwAAAAEAAAAOAAYABwAAAAEAAAAOAAcABwAAAAAAAAANAAcABwAAAAAAAAAMAAcABwAAAAAAAAALAAcABwAAAAAAAAAKAAcABwAAAAAAAAAJAAcABwAAAAAAAAAIAAcABwAAAAAAAAAHAAcABwAAAAAAAAAGAAcABwAAAAAAAAAFAAcABwAAAAAAAAAEAAcABwAAAAAAAAADAAcABwAAAAAAAAACAAcABwAAAAAAAAABAAcABwAAAAAAAAAAAAcABwAAAAAAAAAAAAYABwAAAAEAAAD//wcAAgAAAAAAAAD//wYAAgAAAAAAAAD//wUAAgAAAAAAAAAGAAIABwAAAAAAAAAHAAIABwAAAAAAAAAMAAEAAgAAAAAAAAAMAAIAAgAAAAAAAAA=")
+tile_set = ExtResource("3_j6l6s")
+collision_enabled = false
 
 [node name="blockers" type="Node2D" parent="."]
 
 [node name="PlayerF" parent="." instance=ExtResource("8_toqq8")]
 position = Vector2(48, 48)
+terrain_path = NodePath("../tilemap/block")
 
-[node name="tester" parent="." instance=ExtResource("9_6ayok")]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="die" type="CanvasLayer" parent="."]
 visible = false
 follow_viewport_enabled = true
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="die"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -137,7 +47,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="Control" type="VBoxContainer" parent="CanvasLayer"]
+[node name="Control" type="VBoxContainer" parent="die"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -149,13 +59,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/Control"]
+[node name="Label" type="Label" parent="die/Control"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_clivc")
 theme_override_font_sizes/font_size = 96
 text = "Voce foi pego"
 
-[node name="Button" type="Button" parent="CanvasLayer/Control"]
+[node name="Button" type="Button" parent="die/Control"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_clivc")
 theme_override_font_sizes/font_size = 64
@@ -165,7 +75,7 @@ theme_override_styles/hover = ExtResource("13_u8535")
 theme_override_styles/disabled = ExtResource("14_0833l")
 text = "Reiniciar"
 
-[node name="Button2" type="Button" parent="CanvasLayer/Control"]
+[node name="Button2" type="Button" parent="die/Control"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_clivc")
 theme_override_font_sizes/font_size = 64
@@ -175,10 +85,50 @@ theme_override_styles/hover = ExtResource("13_u8535")
 theme_override_styles/disabled = ExtResource("14_0833l")
 text = "Voltar"
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+[node name="win" type="CanvasLayer" parent="."]
+visible = false
+follow_viewport_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="win"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Control" type="VBoxContainer" parent="win"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="win/Control"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_clivc")
+theme_override_font_sizes/font_size = 96
+text = "Voce salvou o duende"
+
+[node name="Button2" type="Button" parent="win/Control"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_clivc")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = ExtResource("11_epfnf")
+theme_override_styles/pressed = ExtResource("12_f0878")
+theme_override_styles/hover = ExtResource("13_u8535")
+theme_override_styles/disabled = ExtResource("14_0833l")
+text = "Voltar"
+
+[node name="start" type="CanvasLayer" parent="."]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
+[node name="ColorRect" type="ColorRect" parent="start"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -186,7 +136,15 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="tester" parent="." instance=ExtResource("9_6ayok")]
+
+[node name="key" parent="." instance=ExtResource("16_etri3")]
+position = Vector2(304, 208)
+
+[node name="duende_preso" parent="." instance=ExtResource("17_rlw8c")]
+position = Vector2(400, 48)
+
+[connection signal="pressed" from="die/Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="die/Control/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="win/Control/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="area_entered" from="tester" to="PlayerF" method="_on_tester_area_entered"]
-[connection signal="area_entered" from="tester" to="tester" method="_on_area_entered"]
-[connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/Button2" to="." method="_on_button_2_pressed"]

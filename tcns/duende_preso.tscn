@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3mossyooeuoc"]
+
+[ext_resource type="Texture2D" uid="uid://d2sy7t3rbd0d" path="res://sprites/duende-preso.png" id="1_3f0ir"]
+[ext_resource type="Script" uid="uid://cov6pyhr3ef1h" path="res://scripts/duende_preso.gd" id="1_ksvfr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ksvfr"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u06y1"]
+size = Vector2(32, 32)
+
+[node name="duende_preso" type="Area2D"]
+script = ExtResource("1_ksvfr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ksvfr")
+debug_color = Color(0, 0.610235, 0.6389076, 0.41960785)
+
+[node name="laterais" type="Node2D" parent="."]
+
+[node name="l" type="Area2D" parent="laterais"]
+position = Vector2(-32, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/l"]
+shape = SubResource("RectangleShape2D_u06y1")
+debug_color = Color(0.62190795, 0.35339233, 1, 0.41960785)
+
+[node name="u" type="Area2D" parent="laterais"]
+position = Vector2(0, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/u"]
+shape = SubResource("RectangleShape2D_u06y1")
+debug_color = Color(0.62190795, 0.35339233, 1, 0.41960785)
+
+[node name="r" type="Area2D" parent="laterais"]
+position = Vector2(32, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/r"]
+shape = SubResource("RectangleShape2D_u06y1")
+debug_color = Color(0.62190795, 0.35339233, 1, 0.41960785)
+
+[node name="d" type="Area2D" parent="laterais"]
+position = Vector2(0, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/d"]
+shape = SubResource("RectangleShape2D_u06y1")
+debug_color = Color(0.62190795, 0.35339233, 1, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3f0ir")
+
+[connection signal="body_entered" from="laterais/l" to="." method="_on_l_body_entered"]
+[connection signal="body_exited" from="laterais/l" to="." method="_on_l_body_exited"]
+[connection signal="body_entered" from="laterais/u" to="." method="_on_u_body_entered"]
+[connection signal="body_exited" from="laterais/u" to="." method="_on_u_body_exited"]
+[connection signal="body_entered" from="laterais/r" to="." method="_on_r_body_entered"]
+[connection signal="body_exited" from="laterais/r" to="." method="_on_r_body_exited"]
+[connection signal="body_entered" from="laterais/d" to="." method="_on_d_body_entered"]
+[connection signal="body_exited" from="laterais/d" to="." method="_on_d_body_exited"]

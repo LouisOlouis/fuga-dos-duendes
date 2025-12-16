@@ -1,87 +1,103 @@
-extends CharacterBody2D 
-@onready var anim: AnimatedSprite2D = $Sprite2D 
-@onready var block_scene = preload("res://tcns/block.tscn") 
+extends CharacterBody2D
+
+const GRID_SIZE: int = 32
+
+var move := false
+
+@export var terrain_path: NodePath
+@onready var terrain: TileMap = get_node(terrain_path)
+
+@onready var block_scene = preload("res://tcns/block.tscn")
+@onready var anim: AnimatedSprite2D = $Sprite2D
+
+@onready var canvas_die: CanvasLayer = $"../die" 
+@onready var color_die: ColorRect = $"../die/ColorRect"
+
+@onready var canvas_win: CanvasLayer = $"../win"
+@onready var color_win: ColorRect = $"../win/ColorRect"
+
+
 @onready var tester: Area2D = $"../tester"
-@onready var canvas_layer: CanvasLayer = $"../CanvasLayer"
-@onready var color_rect: ColorRect = $"../CanvasLayer/ColorRect"
+@onready var duende_preso: Area2D = $"../duende_preso"
 
-
-var step := 32 
-var move := false 
-var blocked := false
-
-func move_to(new_pos: Vector2): 
-	move = true 
-	var block = block_scene.instantiate() 
-	block.position = position 
-	get_parent().get_node("blockers").add_child(block) 
-	var tween = get_tree().create_tween() 
-	tween.tween_property(self, "position", new_pos, 0.1) 
-	tween.finished.connect(func(): move = false ) 
-	
-
-@warning_ignore("unused_parameter")
-func _process(delta: float) -> void: 
-	if move: 
+func _physics_process(_delta: float) -> void:
+	if move:
 		return
-	
-	var target = position 
-	var pos = target 
-	tester.position = position
-	
-	if Input.is_action_just_pressed("ui_up"):
-		if !move:
-			move = true
-			target.y -= step 
-			tester.position.y -= step
-			anim.play("costas")
-	
-	if Input.is_action_just_pressed("ui_down"): 
-		if !move:
-			move = true
-			target.y += step 
-			tester.position.y += step
-			anim.play("frente") 
-	
-	if Input.is_action_just_pressed("ui_left"): 
-		if !move:
-			move = true
-			target.x -= step 
-			tester.position.x -= step
-			anim.play("lado")
-			anim.scale.x = 1
-	
-	if Input.is_action_just_pressed("ui_right"): 
-		if !move:
-			move = true
-			target.x += step 
-			tester.position.x += step
-			anim.play("lado")
-			anim.scale.x = -1
-	
-	if target.x <= 32 or target.y <= 32 or target.x >= 430 or target.y >= 240: 
-		target = pos 
-		tester.position = pos
-		move = false
-	
-	if blocked:
-		target = pos
-		tester.position = pos 
-	
-	if target != position: 
-		move_to(target) 
-	
-	
 
-func _on_tester_area_entered(area: Area2D) -> void:
-	if area.get_parent().name == "blockers":
-		print("entrou")
-		blocked = true
+	if Input.get_axis("ui_left", "ui_right") != 0 \
+	or Input.get_axis("ui_up", "ui_down") != 0:
+
+		var direction := get_direction()
+		if direction == Vector2.ZERO:
+			return
+		
+		var target_pos := position + direction * GRID_SIZE
+		tester.position = position + direction * GRID_SIZE
+		# TileMap em Godot 4 usa Vector2i
+		var cell: Vector2i = terrain.local_to_map(target_pos)
+
+		# layer 0 (ajuste se usar mais layers)
+		if terrain.get_cell_source_id(0, cell) != -1:
+			if get_parent().has_key and duende_preso.inside:
+				win()
+				move = true
+				return
+			print("Célula inválida")
+			return
+
 		move = true
-		die()
+		play_walk_animation(direction)
+		blocker()
+		var tween := create_tween()
+		tween.tween_property(
+			self,
+			"position",
+			target_pos,
+			0.1
+		)
+		await tween.finished
+		move = false
+
+
+func get_direction() -> Vector2:
+	return Vector2(
+		Input.get_axis("ui_left", "ui_right"),
+		Input.get_axis("ui_up", "ui_down")
+	).normalized()
+
+func play_walk_animation(dir: Vector2) -> void:
+	if dir.x > 0:
+		scale.x = -1
+		anim.play("lado")
+	elif dir.x < 0:
+		scale.x = 1
+		anim.play("lado")
+	elif dir.y > 0:
+		anim.play("frente")
+	elif dir.y < 0:
+		anim.play("costas")
+
+func blocker():
+	var block = block_scene.instantiate()
+	block.position = position
+	get_parent().get_node("blockers").add_child(block)
+	
 
 func die():
-	canvas_layer.visible = true
-	var tween = get_tree().create_tween()
-	tween.tween_property(color_rect, "color", Color(0.0, 0.0, 0.0, 0.655), 0.5) 
+	canvas_die.visible = true
+	var tween = get_tree().create_tween() 
+	tween.tween_property(color_die, "color", Color(0.0, 0.0, 0.0, 0.655), 0.5) 
 	return
+
+func win():
+	canvas_win.visible = true
+	var tween = get_tree().create_tween() 
+	tween.tween_property(color_win, "color", Color(0.0, 0.0, 0.0, 0.655), 0.5) 
+	return
+
+func _on_tester_area_entered(area: Area2D) -> void:
+	if area.get_parent().name == "blockers": 
+		print("entrou") 
+		move = true 
+		die() 
+	print("entrou")
