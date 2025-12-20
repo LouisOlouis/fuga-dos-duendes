@@ -32,6 +32,17 @@ Se quiser abrir e modificar o código:
 
 ## 💡 Créditos
 
+**Projeto feito por:**  
+- Louis Louis
+
+**Arte:**  
+- Louis  
+- Davi Pereira  
+- João Paulo  
+
+**Música:**  
+- Lorenzo
+
 Alguns assets foram usados do **GrafxKid** (conforme licença deles).
 
 ---
