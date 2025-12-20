@@ -1,19 +1,37 @@
-Jogo feito para a game jam da godot brasil
+# Fuga dos Duendes
 
-biuld jogavel: https://louis-louis.itch.io/fuga-dos-duendes
+**Fuga dos Duendes** é um jogo 2D feito para a Godot Brasil Game Jam.  
+Você é um duende fugindo do Papai Noel maligno que armou armadilhas pela neve.  
+Você só pode pisar uma vez em cada piso e as câmeras **resetam o piso** depois.  
+Feito com Godot Engine, alguns assets do GrafxKid.
 
-O papai noel e maligno, ele e muito mau com os duendes
+##  Jogar agora
+O jogo já está publicado e pode ser jogado aqui:  
+👉 https://louis-louis.itch.io/fuga-dos-duendes
 
-voce decide fugir da cidade do polo norte e levar os outros duendes
+##  Como jogar
 
-ele instalou armadilhas pelo chao, voce so pode andar em um piso uma vez,
+- **Mover**: WASD ou setas  
+- **Pular**: Barra de espaço
 
-AS CAMERAS RESETAM O PISO!!!
+##  Regras principais
 
-wasd ou setas para movimento
+- Cada piso só pode ser pisado uma vez  
+- Passar novamente por um piso faz ele resetar  
+- Evite armadilhas do Papai Noel e tente sobreviver
 
-espaço para pular
+## 🛠 Executar no Godot
 
-feito com godot engine
+Se quiser abrir e modificar o código:
 
-alguns assets foram pegos do grafxkid
+1. Clone o repositório  
+   `git clone https://github.com/LouisOlouis/fuga-dos-duendes.git`  
+2. Abra a Godot  
+3. Importe o projeto via `project.godot`  
+4. Aperte Play
+
+## 💡 Créditos
+
+Alguns assets foram usados do **GrafxKid** (conforme licença deles).
+
+---
