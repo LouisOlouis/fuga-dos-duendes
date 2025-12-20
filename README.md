@@ -6,8 +6,9 @@ Você só pode pisar uma vez em cada piso e as câmeras **resetam o piso** depoi
 Feito com Godot Engine, alguns assets do GrafxKid.
 
 ##  Jogar agora
-O jogo já está publicado e pode ser jogado aqui:  
+O jogo já está publicado e pode ser jogado e baixado aqui:  
 👉 https://louis-louis.itch.io/fuga-dos-duendes
+👉 https://github.com/LouisOlouis/fuga-dos-duendes/releases
 
 ##  Como jogar
 
