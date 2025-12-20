@@ -1,0 +1,279 @@
+[gd_scene load_steps=16 format=3 uid="uid://p3mlxwjdymq4"]
+
+[ext_resource type="Script" uid="uid://5lqqalaijo0q" path="res://scripts/start.gd" id="1_6no06"]
+[ext_resource type="Texture2D" uid="uid://di5aevt74ldr1" path="res://sprites/5 - Sky_color.png" id="1_m3eb0"]
+[ext_resource type="Texture2D" uid="uid://bsldb5wgoirp2" path="res://sprites/Background parts/3 - Cloud_cover_1.png" id="2_3x648"]
+[ext_resource type="Texture2D" uid="uid://bh3qpxyovk4np" path="res://sprites/Background parts/4 - Cloud_cover_2.png" id="3_vyrxr"]
+[ext_resource type="Texture2D" uid="uid://c4gaqv2u7csst" path="res://sprites/Background parts/2 - Smaller_mountains.png" id="4_nbxhb"]
+[ext_resource type="Texture2D" uid="uid://b3hh1s5opdrja" path="res://sprites/Background parts/1 - Snowy_foreground_area.png" id="5_dk1g3"]
+[ext_resource type="FontFile" uid="uid://c4gbx4qpwu2fy" path="res://etc/at01.ttf" id="6_g0jbg"]
+[ext_resource type="StyleBox" uid="uid://ciubmamqslg8r" path="res://etc/button.tres" id="7_6no06"]
+[ext_resource type="StyleBox" uid="uid://b1d8ixu70hvik" path="res://etc/button pressed.tres" id="8_5yu1e"]
+[ext_resource type="StyleBox" uid="uid://dsevatp1duedv" path="res://etc/button hover.tres" id="9_unb44"]
+[ext_resource type="StyleBox" uid="uid://cxqth2e7dbfaf" path="res://etc/button disabled.tres" id="10_qy2u1"]
+[ext_resource type="Texture2D" uid="uid://b77cchx8etppv" path="res://sprites/noel_malvado.png" id="12_5yu1e"]
+
+[sub_resource type="Animation" id="Animation_qy2u1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_unb44"]
+resource_name = "cutscene"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lnifi"]
+_data = {
+&"RESET": SubResource("Animation_qy2u1"),
+&"cutscene": SubResource("Animation_unb44")
+}
+
+[node name="Start" type="Node2D"]
+position = Vector2(0, -33)
+script = ExtResource("1_6no06")
+
+[node name="paralax" type="Node2D" parent="."]
+modulate = Color(0.932786, 0.9239034, 0.91503376, 1)
+position = Vector2(0, 68)
+
+[node name="ceu" type="Parallax2D" parent="paralax"]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(576, 416)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="paralax/ceu"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_m3eb0")
+centered = false
+
+[node name="nuvens2" type="Parallax2D" parent="paralax"]
+scroll_scale = Vector2(0.6, 0.6)
+repeat_size = Vector2(576, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="paralax/nuvens2"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_3x648")
+centered = false
+
+[node name="nuvens1" type="Parallax2D" parent="paralax"]
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(576, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="paralax/nuvens1"]
+scale = Vector2(2, 2)
+texture = ExtResource("3_vyrxr")
+centered = false
+
+[node name="montanhas" type="Parallax2D" parent="paralax"]
+scroll_scale = Vector2(0.85, 0.85)
+repeat_size = Vector2(576, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="paralax/montanhas"]
+scale = Vector2(2, 2)
+texture = ExtResource("4_nbxhb")
+centered = false
+
+[node name="arvores" type="Parallax2D" parent="paralax"]
+scroll_scale = Vector2(0.9, 0.9)
+repeat_size = Vector2(576, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="paralax/arvores"]
+scale = Vector2(2, 2)
+texture = ExtResource("5_dk1g3")
+centered = false
+
+[node name="inicio" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="inicio"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Control" type="VBoxContainer" parent="inicio"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = -105.0
+offset_right = 243.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="inicio/Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("6_g0jbg")
+theme_override_font_sizes/font_size = 96
+text = "Fuga dos duendes
+"
+
+[node name="Control2" type="VBoxContainer" parent="inicio/Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="sair" type="Button" parent="inicio/Control/Control2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("6_g0jbg")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = ExtResource("7_6no06")
+theme_override_styles/pressed = ExtResource("8_5yu1e")
+theme_override_styles/hover = ExtResource("9_unb44")
+theme_override_styles/disabled = ExtResource("10_qy2u1")
+text = "  Jogar  "
+
+[node name="Cutscene" type="CanvasLayer" parent="."]
+
+[node name="Control" type="VBoxContainer" parent="Cutscene"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = -105.0
+offset_right = 243.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Cutscene/Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("6_g0jbg")
+theme_override_font_sizes/font_size = 96
+text = "O papai noel e mau"
+
+[node name="Control2" type="VBoxContainer" parent="Cutscene"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = -105.0
+offset_right = 243.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Cutscene/Control2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("6_g0jbg")
+theme_override_font_sizes/font_size = 96
+text = "Salve os outros duendes
+invada as casas pelas chamines"
+
+[node name="Control3" type="VBoxContainer" parent="Cutscene"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = -105.0
+offset_right = 243.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Cutscene/Control3"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("6_g0jbg")
+theme_override_font_sizes/font_size = 96
+text = "Fuja da cidade do polo norte"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lnifi")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 37)
+texture = ExtResource("12_5yu1e")
+centered = false
+hframes = 2
+vframes = 5
+
+[connection signal="pressed" from="inicio/Control/Control2/sair" to="." method="_on_sair_pressed"]

@@ -1,0 +1,279 @@
+[gd_scene load_steps=32 format=4 uid="uid://cvk6cy822e27e"]
+
+[ext_resource type="Script" uid="uid://bw083dgh6ldky" path="res://scripts/scene.gd" id="1_yiyih"]
+[ext_resource type="TileSet" uid="uid://cmvxick7uh3kv" path="res://etc/DEVscene.tres" id="2_4npmh"]
+[ext_resource type="Texture2D" uid="uid://cwhfcv7rxu2pw" path="res://sprites/green-dark.png" id="3_3laor"]
+[ext_resource type="Texture2D" uid="uid://vhu0sub1hhrm" path="res://sprites/red.png" id="4_jd1k1"]
+[ext_resource type="Texture2D" uid="uid://cuvw7p1qci2p0" path="res://sprites/floor.png" id="5_ubjgc"]
+[ext_resource type="Texture2D" uid="uid://dahqeo2ryojiq" path="res://sprites/green.png" id="6_mh6ws"]
+[ext_resource type="Texture2D" uid="uid://d1mv7rxta03tr" path="res://sprites/presente-vermelho.png" id="7_q8mfk"]
+[ext_resource type="Texture2D" uid="uid://cxn7fdwuh1x7p" path="res://sprites/houses.png" id="8_7u4kw"]
+[ext_resource type="Texture2D" uid="uid://cx1nw0imbjqt3" path="res://sprites/presente-verde.png" id="9_4jr5n"]
+[ext_resource type="Texture2D" uid="uid://qh2ps8f4vio7" path="res://sprites/wall.png" id="10_8ydx8"]
+[ext_resource type="Texture2D" uid="uid://ren82eg7oroc" path="res://sprites/presente-azul.png" id="11_joxup"]
+[ext_resource type="TileSet" uid="uid://bk0wyulv1wgj7" path="res://etc/fazes.tres" id="12_pvk1a"]
+[ext_resource type="PackedScene" uid="uid://dqrhmww01ye1o" path="res://tcns/playerF.tscn" id="13_tipkq"]
+[ext_resource type="FontFile" uid="uid://c4gbx4qpwu2fy" path="res://etc/at01.ttf" id="14_odr1o"]
+[ext_resource type="StyleBox" uid="uid://ciubmamqslg8r" path="res://etc/button.tres" id="15_yitlr"]
+[ext_resource type="StyleBox" uid="uid://b1d8ixu70hvik" path="res://etc/button pressed.tres" id="16_3is7v"]
+[ext_resource type="StyleBox" uid="uid://dsevatp1duedv" path="res://etc/button hover.tres" id="17_8j7e3"]
+[ext_resource type="StyleBox" uid="uid://cxqth2e7dbfaf" path="res://etc/button disabled.tres" id="18_8tx4o"]
+[ext_resource type="PackedScene" uid="uid://dj8giv2m27bil" path="res://tcns/tester.tscn" id="19_frlni"]
+[ext_resource type="PackedScene" uid="uid://udpgiymj5kro" path="res://tcns/key.tscn" id="20_0u6bq"]
+[ext_resource type="PackedScene" uid="uid://c3mossyooeuoc" path="res://tcns/duende_preso.tscn" id="21_iglfr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7tjw"]
+texture = ExtResource("3_3laor")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aoopg"]
+texture = ExtResource("4_jd1k1")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlkxq"]
+texture = ExtResource("5_ubjgc")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_teipq"]
+texture = ExtResource("6_mh6ws")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u8535"]
+texture = ExtResource("7_q8mfk")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5phn"]
+texture = ExtResource("8_7u4kw")
+texture_region_size = Vector2i(32, 32)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 5.00331, 0.018260956, -16, -16, -16, -16, 4.98505)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.032348633, -16, 16, -16, 16, 5.01412, 0, 5.046469)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 5.00331, 0.018260956, -16, -16, -16, -16, 4.98505)
+4:7/0 = 0
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:8/0 = 0
+3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:8/0 = 0
+2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:8/0 = 0
+1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.032348633, -16, 16, -16, 16, 5.01412, 0, 5.046469)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0833l"]
+texture = ExtResource("9_4jr5n")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_om3ik"]
+texture = ExtResource("10_8ydx8")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4jv1"]
+texture = ExtResource("11_joxup")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2wjab"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_teipq")
+sources/0 = SubResource("TileSetAtlasSource_o7tjw")
+sources/1 = SubResource("TileSetAtlasSource_aoopg")
+sources/2 = SubResource("TileSetAtlasSource_tlkxq")
+sources/5 = SubResource("TileSetAtlasSource_y5phn")
+sources/7 = SubResource("TileSetAtlasSource_om3ik")
+sources/4 = SubResource("TileSetAtlasSource_u8535")
+sources/6 = SubResource("TileSetAtlasSource_0833l")
+sources/8 = SubResource("TileSetAtlasSource_v4jv1")
+
+[node name="3" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_yiyih")
+
+[node name="tilemap" type="Node2D" parent="."]
+
+[node name="block" type="TileMap" parent="tilemap"]
+tile_set = ExtResource("2_4npmh")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393229, 1, 0, 327693, 1, 0, 262157, 1, 0, 196621, 1, 0, 131085, 1, 0, 65549, 1, 0, 13, 1, 0, 12, 1, 0, 11, 1, 0, 10, 1, 0, 9, 1, 0, 8, 1, 0, 7, 1, 0, 6, 1, 0, 5, 1, 0, 4, 1, 0, 3, 1, 0, 2, 1, 0, 1, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 196610, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 196615, 1, 0, 196614, 1, 0, 196613, 1, 0, 196612, 1, 0, 196611, 1, 0, 196617, 1, 0, 262153, 1, 0, 262154, 1, 0, 196618, 1, 0, 262155, 1, 0)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="tilemap"]
+tile_map_data = PackedByteArray("AAABAAIAAgAAAAAAAAABAAMAAgAAAAAAAAABAAQAAgAAAAAAAAABAAUAAgAAAAAAAAACAAUAAgAAAAAAAAADAAUAAgAAAAAAAAAEAAUAAgAAAAAAAAAFAAUAAgAAAAAAAAAGAAUAAgAAAAAAAAAHAAUAAgAAAAAAAAAIAAUAAgAAAAAAAAAJAAUAAgAAAAAAAAAKAAUAAgAAAAAAAAALAAUAAgAAAAAAAAAMAAUAAgAAAAAAAAAMAAIAAgAAAAAAAAAMAAMAAgAAAAAAAAAMAAQAAgAAAAAAAAALAAIAAgAAAAAAAAALAAMAAgAAAAAAAAACAAIAAgAAAAAAAAADAAIAAgAAAAAAAAAEAAIAAgAAAAAAAAAFAAIAAgAAAAAAAAAGAAIAAgAAAAAAAAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAAIAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAACAAQABwAAAAEAAAADAAQABwAAAAEAAAAEAAQABwAAAAEAAAAFAAQABwAAAAEAAAAGAAQABwAAAAEAAAAHAAQABwAAAAEAAAACAAMABwAAAAAAAAADAAMABwAAAAAAAAAEAAMABwAAAAAAAAAFAAMABwAAAAAAAAAGAAMABwAAAAAAAAAHAAMABwAAAAAAAAAJAAQABwAAAAEAAAAKAAQABwAAAAEAAAAJAAMABwAAAAAAAAAKAAMABwAAAAAAAAALAAQAAgAAAAAAAAAAAAYABwAAAAEAAAAAAAUABwAAAAEAAAAAAAQABwAAAAAAAAAAAAMABwAAAAAAAAAAAAIABwAAAAAAAAAAAAEABwAAAAAAAAAAAAAABwAAAAAAAAABAAEABwAAAAEAAAACAAEABwAAAAEAAAAEAAEABwAAAAEAAAAFAAEABwAAAAEAAAAGAAEABwAAAAEAAAAHAAEABwAAAAEAAAAIAAEABwAAAAEAAAAJAAEABwAAAAEAAAAKAAEABwAAAAEAAAALAAEABwAAAAEAAAAMAAEABwAAAAEAAAANAAEABwAAAAAAAAANAAAABwAAAAAAAAAMAAAABwAAAAEAAAALAAAABwAAAAEAAAAKAAAABwAAAAEAAAAJAAAABwAAAAEAAAAIAAAABwAAAAEAAAAHAAAABwAAAAEAAAAGAAAABwAAAAEAAAAFAAAABwAAAAEAAAAEAAAABwAAAAEAAAADAAAABwAAAAEAAAACAAAABwAAAAEAAAABAAAABwAAAAEAAAABAAYABwAAAAAAAAACAAYABwAAAAAAAAADAAYABwAAAAAAAAAEAAYABwAAAAAAAAAFAAYABwAAAAAAAAAGAAYABwAAAAAAAAAHAAYABwAAAAAAAAAIAAYABwAAAAAAAAAJAAYABwAAAAAAAAAKAAYABwAAAAAAAAALAAYABwAAAAAAAAAMAAYABwAAAAAAAAANAAYABwAAAAEAAAANAAUABwAAAAEAAAANAAQABwAAAAAAAAANAAMABwAAAAAAAAANAAIABwAAAAAAAAADAAEAAgAAAAAAAAABAAcABwAAAAAAAAACAAcABwAAAAAAAAADAAcABwAAAAAAAAAEAAcABwAAAAAAAAAFAAcABwAAAAAAAAAGAAcABwAAAAAAAAAHAAcABwAAAAAAAAAIAAcABwAAAAAAAAAJAAcABwAAAAAAAAAKAAcABwAAAAAAAAALAAcABwAAAAAAAAAMAAcABwAAAAAAAAANAAcABwAAAAAAAAAAAAcABwAAAAAAAAD//wcABwAAAAAAAAA=")
+tile_set = SubResource("TileSet_2wjab")
+collision_enabled = false
+
+[node name="deco" type="TileMapLayer" parent="tilemap"]
+tile_map_data = PackedByteArray("AAALAAQACAAAAAAAAAA=")
+tile_set = ExtResource("12_pvk1a")
+collision_enabled = false
+
+[node name="blockers" type="Node2D" parent="."]
+
+[node name="PlayerF" parent="." instance=ExtResource("13_tipkq")]
+position = Vector2(48, 80)
+key_number = 2
+terrain_path = NodePath("../tilemap/block")
+
+[node name="die" type="CanvasLayer" parent="."]
+visible = false
+follow_viewport_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="die"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Control" type="VBoxContainer" parent="die"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="die/Control"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("14_odr1o")
+theme_override_font_sizes/font_size = 96
+text = "Voce foi pego"
+
+[node name="Button" type="Button" parent="die/Control"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("14_odr1o")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = ExtResource("15_yitlr")
+theme_override_styles/pressed = ExtResource("16_3is7v")
+theme_override_styles/hover = ExtResource("17_8j7e3")
+theme_override_styles/disabled = ExtResource("18_8tx4o")
+text = "Reiniciar"
+
+[node name="Button2" type="Button" parent="die/Control"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("14_odr1o")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = ExtResource("15_yitlr")
+theme_override_styles/pressed = ExtResource("16_3is7v")
+theme_override_styles/hover = ExtResource("17_8j7e3")
+theme_override_styles/disabled = ExtResource("18_8tx4o")
+text = "Voltar"
+
+[node name="win" type="CanvasLayer" parent="."]
+visible = false
+follow_viewport_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="win"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Control" type="VBoxContainer" parent="win"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="win/Control"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("14_odr1o")
+theme_override_font_sizes/font_size = 96
+text = "Voce salvou o duende"
+
+[node name="Button2" type="Button" parent="win/Control"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("14_odr1o")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = ExtResource("15_yitlr")
+theme_override_styles/pressed = ExtResource("16_3is7v")
+theme_override_styles/hover = ExtResource("17_8j7e3")
+theme_override_styles/disabled = ExtResource("18_8tx4o")
+text = "Voltar"
+
+[node name="start" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="start"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="tester" parent="." instance=ExtResource("19_frlni")]
+
+[node name="key" parent="." instance=ExtResource("20_0u6bq")]
+position = Vector2(144, 80)
+
+[node name="key2" parent="." instance=ExtResource("20_0u6bq")]
+position = Vector2(368, 112)
+
+[node name="duende_preso" parent="." instance=ExtResource("21_iglfr")]
+position = Vector2(112, 48)
+
+[connection signal="pressed" from="die/Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="die/Control/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="win/Control/Button2" to="." method="_on_win_pressed"]
+[connection signal="area_entered" from="tester" to="PlayerF" method="_on_tester_area_entered"]

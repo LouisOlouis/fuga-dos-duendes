@@ -1,9 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfxgmkwd4wrn7"]
+[gd_scene load_steps=9 format=3 uid="uid://bfxgmkwd4wrn7"]
 
 [ext_resource type="Texture2D" uid="uid://dcc4q8uumtybx" path="res://sprites/camera-verde.png" id="1_7uhdl"]
+[ext_resource type="Script" uid="uid://5wb8vycl5g4f" path="res://scripts/camera.gd" id="1_m660f"]
 [ext_resource type="Texture2D" uid="uid://b68287mvt8ey2" path="res://sprites/camera-vermelha.png" id="2_vjpf2"]
+[ext_resource type="Texture2D" uid="uid://dahqeo2ryojiq" path="res://sprites/green.png" id="3_cmxf7"]
+[ext_resource type="Texture2D" uid="uid://vhu0sub1hhrm" path="res://sprites/red.png" id="4_m660f"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_cmxf7"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7uhdl"]
+size = Vector2(32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rcm3t"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -11,7 +17,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"green",
-"speed": 1.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -22,8 +28,49 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="camera" type="AnimatedSprite2D"]
-rotation = -1.5707964
-sprite_frames = SubResource("SpriteFrames_cmxf7")
-animation = &"green"
+[sub_resource type="SpriteFrames" id="SpriteFrames_35eo2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cmxf7")
+}],
+"loop": true,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_m660f")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}]
+
+[node name="camera" type="Area2D"]
+script = ExtResource("1_m660f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_7uhdl")
+debug_color = Color(0.99556094, 0, 0.21110716, 0.41960785)
+
+[node name="observer" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rcm3t")
+animation = &"red"
 autoplay = "red"
+
+[node name="camera" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.2784314)
+position = Vector2(0, 32)
+sprite_frames = SubResource("SpriteFrames_35eo2")
+animation = &"red"
+autoplay = "red"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

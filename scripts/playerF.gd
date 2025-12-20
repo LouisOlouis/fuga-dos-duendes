@@ -4,6 +4,10 @@ const GRID_SIZE: int = 32
 
 var move := false
 
+signal walk
+
+@export var key_number = 1
+
 @export var terrain_path: NodePath
 @onready var terrain: TileMap = get_node(terrain_path)
 
@@ -20,43 +24,45 @@ var move := false
 @onready var tester: Area2D = $"../tester"
 @onready var duende_preso: Area2D = $"../duende_preso"
 
+
 func _physics_process(_delta: float) -> void:
 	if move:
 		return
 
-	if Input.get_axis("ui_left", "ui_right") != 0 \
-	or Input.get_axis("ui_up", "ui_down") != 0:
+	if not (
+		Input.is_action_just_pressed("ui_left")
+		or Input.is_action_just_pressed("ui_right")
+		or Input.is_action_just_pressed("ui_up")
+		or Input.is_action_just_pressed("ui_down")
+	):
+		return
 
-		var direction := get_direction()
-		if direction == Vector2.ZERO:
-			return
-		
-		var target_pos := position + direction * GRID_SIZE
-		tester.position = position + direction * GRID_SIZE
-		# TileMap em Godot 4 usa Vector2i
-		var cell: Vector2i = terrain.local_to_map(target_pos)
+	var direction := get_direction()
+	if direction == Vector2.ZERO:
+		return
 
-		# layer 0 (ajuste se usar mais layers)
-		if terrain.get_cell_source_id(0, cell) != -1:
-			if get_parent().has_key and duende_preso.inside:
-				win()
-				move = true
-				return
-			print("Célula inválida")
-			return
+	var target_pos := position + direction * GRID_SIZE
+	tester.position = target_pos
 
-		move = true
-		play_walk_animation(direction)
-		blocker()
-		var tween := create_tween()
-		tween.tween_property(
-			self,
-			"position",
-			target_pos,
-			0.1
-		)
-		await tween.finished
-		move = false
+	var cell: Vector2i = terrain.local_to_map(target_pos)
+
+	if terrain.get_cell_source_id(0, cell) != -1:
+		if get_parent().has_key == key_number and duende_preso.inside:
+			win()
+			move = true
+		return
+
+	move = true
+	emit_signal("walk")
+	get_parent().steps += 1
+	play_walk_animation(direction)
+	blocker()
+
+	var tween := create_tween()
+	tween.tween_property(self, "position", target_pos, 0.1)
+	await tween.finished
+	move = false
+
 
 
 func get_direction() -> Vector2:
@@ -78,10 +84,12 @@ func play_walk_animation(dir: Vector2) -> void:
 		anim.play("costas")
 
 func blocker():
-	var block = block_scene.instantiate()
-	block.position = position
-	get_parent().get_node("blockers").add_child(block)
-	
+	if get_parent().inside_camera == false:
+		var block = block_scene.instantiate()
+		block.position = position
+		get_parent().get_node("blockers").add_child(block)
+	else:
+		print("negado")
 
 func die():
 	canvas_die.visible = true

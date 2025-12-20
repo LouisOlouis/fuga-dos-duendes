@@ -4,6 +4,8 @@ extends Node2D
 @onready var player_g: CharacterBody2D = $"../PlayerG"
 @onready var label: Label = $"../CanvasLayer/Control/Label"
 @onready var control: VBoxContainer = $"../CanvasLayer/Control"
+@onready var entrar: Button = $"../CanvasLayer/Control/entrar"
+@onready var dev_scene: Node2D = $".."
 
 var house = 0
 
@@ -24,6 +26,11 @@ func _ready() -> void:
 func _on__entered(obj: Variant) -> void:
 	print(obj.name)
 	house = obj.name
+	entrar.disabled = false
+	entrar.text = "Entrar"
+	if Globals.duendes[obj.name] == true:
+		entrar.text = "DUENDE RESGATADO"
+		entrar.disabled = true
 	label.text = "Casa " + obj.name
 	canvas_layer.visible = true
 	player_g.move = true
@@ -38,6 +45,7 @@ func _on_entrar_pressed() -> void:
 	call_deferred("change_level")
 
 func change_level():
+	await dev_scene.curtinas()
 	get_tree().change_scene_to_file("res://tcns/fases/" + house + ".tscn")
 
 

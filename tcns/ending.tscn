@@ -1,0 +1,625 @@
+[gd_scene load_steps=20 format=4 uid="uid://didfupku5cbho"]
+
+[ext_resource type="Texture2D" uid="uid://di5aevt74ldr1" path="res://sprites/5 - Sky_color.png" id="1_kkjre"]
+[ext_resource type="Script" uid="uid://dty4lovcfswxj" path="res://scripts/ending.gd" id="1_tcpwe"]
+[ext_resource type="Texture2D" uid="uid://bsldb5wgoirp2" path="res://sprites/Background parts/3 - Cloud_cover_1.png" id="2_2orre"]
+[ext_resource type="Texture2D" uid="uid://bh3qpxyovk4np" path="res://sprites/Background parts/4 - Cloud_cover_2.png" id="3_tcpwe"]
+[ext_resource type="Texture2D" uid="uid://c4gaqv2u7csst" path="res://sprites/Background parts/2 - Smaller_mountains.png" id="4_jhvhc"]
+[ext_resource type="Texture2D" uid="uid://b3hh1s5opdrja" path="res://sprites/Background parts/1 - Snowy_foreground_area.png" id="5_dhp4j"]
+[ext_resource type="TileSet" uid="uid://cmvxick7uh3kv" path="res://etc/DEVscene.tres" id="6_immof"]
+[ext_resource type="Texture2D" uid="uid://dkka25yukg6s6" path="res://sprites/duende-lado-andando.png" id="7_irs2p"]
+[ext_resource type="Texture2D" uid="uid://btplvfn58eh0o" path="res://sprites/duende.png" id="8_y8705"]
+[ext_resource type="Texture2D" uid="uid://nir72g4grmxf" path="res://sprites/duende-pulando (1).png" id="9_d5rai"]
+[ext_resource type="FontFile" uid="uid://c4gbx4qpwu2fy" path="res://etc/at01.ttf" id="11_jhvhc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03v1n"]
+atlas = ExtResource("7_irs2p")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4y6c"]
+atlas = ExtResource("7_irs2p")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5ypf"]
+atlas = ExtResource("7_irs2p")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iv500"]
+atlas = ExtResource("7_irs2p")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_we4qa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03v1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4y6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5ypf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iv500")
+}],
+"loop": true,
+"name": &"andando",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_y8705")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_d5rai")
+}],
+"loop": true,
+"name": &"pulo",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_kkjre"]
+resource_name = "Ending"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("duendes/Sprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("duendes/Sprite2D2:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("duendes/Sprite2D3:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("duendes/Sprite2D4:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("duendes/Sprite2D5:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("duendes/Sprite2D6:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("duendes/Sprite2D7:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Camera2D:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(218, -0.25, 0, 0.25, 0, 1495, -1, -212.83333, 0, 0),
+"times": PackedFloat32Array(0, 6)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Camera2D:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(307, -0.25, 0, 0.25, 0, 307, -1, 0, 0, 0),
+"times": PackedFloat32Array(0, 6)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("duendes:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1277, -1, -212.83333, 0, 0),
+"times": PackedFloat32Array(0, 6)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("duendes:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -1, 0, 0, 0),
+"times": PackedFloat32Array(0, 6)
+}
+
+[sub_resource type="Animation" id="Animation_2orre"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("duendes/Sprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("duendes/Sprite2D2:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("duendes/Sprite2D3:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("duendes/Sprite2D4:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("duendes/Sprite2D5:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("duendes/Sprite2D6:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("duendes/Sprite2D7:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"andando"]
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Camera2D:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(218, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Camera2D:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(307, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("duendes:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("duendes:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tcpwe"]
+_data = {
+&"Ending": SubResource("Animation_kkjre"),
+&"RESET": SubResource("Animation_2orre")
+}
+
+[node name="Ending" type="Node2D"]
+script = ExtResource("1_tcpwe")
+
+[node name="paralax" type="Node2D" parent="."]
+modulate = Color(0.932786, 0.9239034, 0.91503376, 1)
+
+[node name="ceu" type="Parallax2D" parent="paralax"]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(576, 416)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="paralax/ceu"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_kkjre")
+centered = false
+
+[node name="nuvens2" type="Parallax2D" parent="paralax"]
+scroll_scale = Vector2(0.6, 0.6)
+repeat_size = Vector2(576, 0)
+autoscroll = Vector2(-3, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="paralax/nuvens2"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_2orre")
+centered = false
+
+[node name="nuvens1" type="Parallax2D" parent="paralax"]
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(576, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="paralax/nuvens1"]
+scale = Vector2(2, 2)
+texture = ExtResource("3_tcpwe")
+centered = false
+
+[node name="montanhas" type="Parallax2D" parent="paralax"]
+scroll_scale = Vector2(0.85, 0.85)
+repeat_size = Vector2(576, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="paralax/montanhas"]
+scale = Vector2(2, 2)
+texture = ExtResource("4_jhvhc")
+centered = false
+
+[node name="arvores" type="Parallax2D" parent="paralax"]
+scroll_scale = Vector2(0.9, 0.9)
+repeat_size = Vector2(576, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="paralax/arvores"]
+scale = Vector2(2, 2)
+texture = ExtResource("5_dhp4j")
+centered = false
+
+[node name="tilemap" type="Node2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="tilemap"]
+tile_map_data = PackedByteArray("AAARAAwABwAAAAAAAAARAA0ABwAAAAEAAAASAAwABwAAAAAAAAASAA0ABwAAAAEAAAATAAwABwAAAAAAAAATAA0ABwAAAAEAAAAUAAwABwAAAAAAAAAUAA0ABwAAAAEAAAAVAA0ABwAAAAEAAAAWAAwABwAAAAAAAAAWAA0ABwAAAAEAAAAXAAwABwAAAAAAAAAXAA0ABwAAAAEAAAAYAAwABwAAAAAAAAAYAA0ABwAAAAEAAAAZAAwABwAAAAAAAAAZAA0ABwAAAAEAAAAaAAwABwAAAAAAAAAaAA0ABwAAAAEAAAAbAAwABwAAAAAAAAAbAA0ABwAAAAEAAAABAAwABwAAAAAAAAABAA0ABwAAAAEAAAACAAwABwAAAAAAAAACAA0ABwAAAAEAAAADAAwABwAAAAAAAAADAA0ABwAAAAEAAAAEAAwABwAAAAAAAAAEAA0ABwAAAAEAAAAFAAwABwAAAAAAAAAFAA0ABwAAAAEAAAAGAAwABwAAAAAAAAAGAA0ABwAAAAEAAAAHAAwABwAAAAAAAAAHAA0ABwAAAAEAAAAIAAwABwAAAAAAAAAIAA0ABwAAAAEAAAAJAAwABwAAAAAAAAAJAA0ABwAAAAEAAAAKAAwABwAAAAAAAAAKAA0ABwAAAAEAAAALAAwABwAAAAAAAAALAA0ABwAAAAEAAAAMAAwABwAAAAAAAAAMAA0ABwAAAAEAAAANAAwABwAAAAAAAAANAA0ABwAAAAEAAAAOAAwABwAAAAAAAAAOAA0ABwAAAAEAAAAPAAwABwAAAAAAAAAPAA0ABwAAAAEAAAAQAAwABwAAAAAAAAAQAA0ABwAAAAEAAAD//wwABwAAAAEAAAD//w0ABwAAAAEAAAAAAAwABwAAAAAAAAAAAA0ABwAAAAEAAAD//wQABwAAAAEAAAD//wUABwAAAAEAAAD//wYABwAAAAEAAAD//wcABwAAAAEAAAD//wgABwAAAAEAAAD//wkABwAAAAEAAAD//woABwAAAAEAAAD//wsABwAAAAEAAAAVAAwABwAAAAAAAAAAAA4ABwAAAAEAAAABAA4ABwAAAAEAAAACAA4ABwAAAAEAAAADAA4ABwAAAAEAAAAEAA4ABwAAAAEAAAAFAA4ABwAAAAEAAAAGAA4ABwAAAAEAAAAHAA4ABwAAAAEAAAAIAA4ABwAAAAEAAAAJAA4ABwAAAAEAAAAKAA4ABwAAAAEAAAALAA4ABwAAAAEAAAAMAA4ABwAAAAEAAAANAA4ABwAAAAEAAAAOAA4ABwAAAAEAAAAPAA4ABwAAAAEAAAAQAA4ABwAAAAEAAAARAA4ABwAAAAEAAAASAA4ABwAAAAEAAAATAA4ABwAAAAEAAAAUAA4ABwAAAAEAAAAVAA4ABwAAAAEAAAAWAA4ABwAAAAEAAAAXAA4ABwAAAAEAAAAYAA4ABwAAAAEAAAAbAA4ABwAAAAEAAAAaAA4ABwAAAAEAAAAZAA4ABwAAAAEAAAAcAAwABwAAAAAAAAAdAAwABwAAAAAAAAAeAAwABwAAAAAAAAAfAAwABwAAAAAAAAAgAAwABwAAAAAAAAAhAAwABwAAAAAAAAAiAAwABwAAAAAAAAAjAAwABwAAAAAAAAAkAAwABwAAAAAAAAAlAAwABwAAAAAAAAAmAAwABwAAAAAAAAAnAAwABwAAAAAAAAAoAAwABwAAAAAAAAApAAwABwAAAAAAAAAqAAwABwAAAAAAAAArAAwABwAAAAAAAAAwAAwABwAAAAAAAAAxAAwABwAAAAAAAAAyAAwABwAAAAAAAAAzAAwABwAAAAAAAAA0AAwABwAAAAAAAAA1AAwABwAAAAAAAAAcAA0ABwAAAAEAAAAcAA4ABwAAAAEAAAAdAA0ABwAAAAEAAAAdAA4ABwAAAAEAAAAeAA0ABwAAAAEAAAAeAA4ABwAAAAEAAAAfAA0ABwAAAAEAAAAfAA4ABwAAAAEAAAAgAA0ABwAAAAEAAAAgAA4ABwAAAAEAAAAhAA0ABwAAAAEAAAAhAA4ABwAAAAEAAAAiAA0ABwAAAAEAAAAiAA4ABwAAAAEAAAAjAA0ABwAAAAEAAAAjAA4ABwAAAAEAAAAkAA0ABwAAAAEAAAAkAA4ABwAAAAEAAAAlAA0ABwAAAAEAAAAlAA4ABwAAAAEAAAAmAA0ABwAAAAEAAAAmAA4ABwAAAAEAAAAnAA0ABwAAAAEAAAAnAA4ABwAAAAEAAAAoAA0ABwAAAAEAAAAoAA4ABwAAAAEAAAApAA0ABwAAAAEAAAApAA4ABwAAAAEAAAAqAA0ABwAAAAEAAAAqAA4ABwAAAAEAAAArAA0ABwAAAAEAAAArAA4ABwAAAAEAAAAsAA0ABwAAAAEAAAAsAA4ABwAAAAEAAAAtAA0ABwAAAAEAAAAtAA4ABwAAAAEAAAAuAA0ABwAAAAEAAAAuAA4ABwAAAAEAAAAvAA0ABwAAAAEAAAAvAA4ABwAAAAEAAAAwAA0ABwAAAAEAAAAwAA4ABwAAAAEAAAAxAA0ABwAAAAEAAAAxAA4ABwAAAAEAAAAyAA0ABwAAAAEAAAAyAA4ABwAAAAEAAAAzAA0ABwAAAAEAAAAzAA4ABwAAAAEAAAA0AA0ABwAAAAEAAAA0AA4ABwAAAAEAAAA1AA0ABwAAAAEAAAA1AA4ABwAAAAEAAAA2AAwABwAAAAAAAAA3AAwABwAAAAAAAAA4AAwABwAAAAAAAAA5AAwABwAAAAAAAAA6AAwABwAAAAAAAAA7AAwABwAAAAAAAAA8AAwABwAAAAAAAAA2AA0ABwAAAAEAAAA2AA4ABwAAAAEAAAA3AA0ABwAAAAEAAAA3AA4ABwAAAAEAAAA4AA0ABwAAAAEAAAA4AA4ABwAAAAEAAAA5AA0ABwAAAAEAAAA5AA4ABwAAAAEAAAA6AA0ABwAAAAEAAAA6AA4ABwAAAAEAAAA7AA0ABwAAAAEAAAA7AA4ABwAAAAEAAAA8AA0ABwAAAAEAAAA8AA4ABwAAAAEAAAAsAAwABwAAAAAAAAAtAAwABwAAAAAAAAAuAAwABwAAAAAAAAAvAAwABwAAAAAAAAA9AAwABwAAAAAAAAA+AAwABwAAAAAAAAA/AAwABwAAAAAAAABAAAwABwAAAAAAAABBAAwABwAAAAAAAABCAAwABwAAAAAAAABDAAwABwAAAAAAAABEAAwABwAAAAAAAABFAAwABwAAAAAAAAA9AA0ABwAAAAEAAAA+AA0ABwAAAAEAAAA+AA4ABwAAAAEAAAA/AA4ABwAAAAEAAABAAA4ABwAAAAEAAABBAA0ABwAAAAEAAABCAA0ABwAAAAEAAABDAA0ABwAAAAEAAABEAA0ABwAAAAEAAABFAA0ABwAAAAEAAABFAA4ABwAAAAEAAABEAA4ABwAAAAEAAABDAA4ABwAAAAEAAABCAA4ABwAAAAEAAABBAA4ABwAAAAEAAAA9AA4ABwAAAAEAAAA/AA0ABwAAAAEAAABAAA0ABwAAAAEAAAA=")
+tile_set = ExtResource("6_immof")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(218, 307)
+offset = Vector2(10, 0)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_right = 2208
+limit_bottom = 450
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+
+[node name="duendes" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="duendes"]
+position = Vector2(129, 368)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_we4qa")
+animation = &"andando"
+autoplay = "default"
+frame_progress = 0.13706897
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="duendes"]
+position = Vector2(165, 368)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_we4qa")
+animation = &"andando"
+autoplay = "default"
+frame_progress = 0.2504814
+
+[node name="Sprite2D3" type="AnimatedSprite2D" parent="duendes"]
+position = Vector2(199, 368)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_we4qa")
+animation = &"andando"
+autoplay = "default"
+frame_progress = 0.49340877
+
+[node name="Sprite2D4" type="AnimatedSprite2D" parent="duendes"]
+position = Vector2(92, 368)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_we4qa")
+animation = &"andando"
+autoplay = "default"
+frame_progress = 0.09325347
+
+[node name="Sprite2D5" type="AnimatedSprite2D" parent="duendes"]
+position = Vector2(143, 368)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_we4qa")
+animation = &"andando"
+autoplay = "default"
+frame_progress = 0.5754389
+
+[node name="Sprite2D6" type="AnimatedSprite2D" parent="duendes"]
+position = Vector2(182, 368)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_we4qa")
+animation = &"andando"
+autoplay = "default"
+frame_progress = 0.9291899
+
+[node name="Sprite2D7" type="AnimatedSprite2D" parent="duendes"]
+position = Vector2(252, 368)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_we4qa")
+animation = &"andando"
+autoplay = "default"
+frame_progress = 0.02212874
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_tcpwe")
+}
+autoplay = "Ending"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control5" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -77.5
+offset_right = 150.0
+offset_bottom = 77.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Control5"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("11_jhvhc")
+theme_override_font_sizes/font_size = 96
+text = "Voce salvou os duendes"
+horizontal_alignment = 1
+
+[node name="Control" type="VBoxContainer" parent="CanvasLayer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.26702216, 0.4711855, 1, 1)
+theme_override_fonts/font = ExtResource("11_jhvhc")
+theme_override_font_sizes/font_size = 96
+text = "Feito por
+Louis_Louis"
+horizontal_alignment = 1
+
+[node name="Control2" type="VBoxContainer" parent="CanvasLayer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Control2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.26702216, 0.4711855, 1, 1)
+theme_override_fonts/font = ExtResource("11_jhvhc")
+theme_override_font_sizes/font_size = 96
+text = "Artes:
+Joao Paulo"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.26702216, 0.4711855, 1, 1)
+theme_override_fonts/font = ExtResource("11_jhvhc")
+theme_override_font_sizes/font_size = 48
+text = "(criador do biribinha)"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer/Control2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.26702216, 0.4711855, 1, 1)
+theme_override_fonts/font = ExtResource("11_jhvhc")
+theme_override_font_sizes/font_size = 96
+text = "Davi Pereira"
+horizontal_alignment = 1
+
+[node name="Control3" type="VBoxContainer" parent="CanvasLayer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Control3"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.26702216, 0.4711855, 1, 1)
+theme_override_fonts/font = ExtResource("11_jhvhc")
+theme_override_font_sizes/font_size = 96
+text = "Musica:
+Lorenzo Gabriel"
+horizontal_alignment = 1
+
+[node name="Control4" type="VBoxContainer" parent="CanvasLayer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Control4"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.26702216, 0.4711855, 1, 1)
+theme_override_fonts/font = ExtResource("11_jhvhc")
+theme_override_font_sizes/font_size = 96
+text = "Obrigado por jogar :)"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0

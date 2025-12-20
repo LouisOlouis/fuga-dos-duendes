@@ -35,10 +35,12 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func state():
-	if velocity == Vector2.ZERO:
+	if not is_on_floor():
+		if velocity.x == 0:
+			anim.play("pulo_reto")
+		else:
+			anim.play("pulo")
+	elif velocity == Vector2.ZERO:
 		anim.play("default")
 	else:
 		anim.play("andando")
-	if not is_on_floor():
-		anim.play("pulo")
-	

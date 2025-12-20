@@ -1,9 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://dqrhmww01ye1o"]
+[gd_scene load_steps=18 format=3 uid="uid://dqrhmww01ye1o"]
 
-[ext_resource type="Texture2D" uid="uid://btplvfn58eh0o" path="res://sprites/duende.png" id="1_7mxcf"]
 [ext_resource type="Script" uid="uid://bsenro0lqfd3w" path="res://scripts/playerF.gd" id="1_iccjt"]
 [ext_resource type="Texture2D" uid="uid://cblbaim3xl7yl" path="res://sprites/duende-de-costas-andando.png" id="2_iip27"]
+[ext_resource type="Texture2D" uid="uid://u72ipm0jtwfx" path="res://sprites/duende2.png" id="3_ok4nv"]
 [ext_resource type="Texture2D" uid="uid://dkka25yukg6s6" path="res://sprites/duende-lado-andando.png" id="4_iip27"]
+[ext_resource type="Texture2D" uid="uid://dtsto4sudy73c" path="res://sprites/duende4.png" id="4_ikb3i"]
+[ext_resource type="Texture2D" uid="uid://dfoo76vtxjx0x" path="res://sprites/duende3.png" id="5_fxgjc"]
+[ext_resource type="Texture2D" uid="uid://b0iu1yg3uyweu" path="res://sprites/duende1.png" id="6_1g1ww"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pd07"]
 size = Vector2(30, 30)
@@ -61,11 +64,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7mxcf")
+"texture": ExtResource("3_ok4nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fxgjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ikb3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1g1ww")
 }],
-"loop": true,
+"loop": false,
 "name": &"frente",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -90,9 +102,9 @@ script = ExtResource("1_iccjt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4pd07")
-debug_color = Color(0, 0.6, 0.69803923, 1)
+debug_color = Color(0, 0.6, 0.69803923, 0.28627452)
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iip27")
-animation = &"costas"
+animation = &"frente"
 autoplay = "frente"
