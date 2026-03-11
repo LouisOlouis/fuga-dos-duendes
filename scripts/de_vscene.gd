@@ -4,7 +4,6 @@ extends Node2D
 @onready var timer: Timer = $start/Timer
 
 func _ready() -> void:
-	Music.stream.loop = true
 	start.visible = true
 	timer.start(0.5)
 	await timer.timeout
