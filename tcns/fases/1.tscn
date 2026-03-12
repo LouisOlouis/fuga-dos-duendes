@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://h53myux4lbh5"]
+[gd_scene format=4 uid="uid://h53myux4lbh5"]
 
 [ext_resource type="Script" uid="uid://bw083dgh6ldky" path="res://scripts/scene.gd" id="1_x85js"]
 [ext_resource type="TileSet" uid="uid://cmvxick7uh3kv" path="res://etc/DEVscene.tres" id="2_x85js"]
@@ -13,33 +13,33 @@
 [ext_resource type="PackedScene" uid="uid://udpgiymj5kro" path="res://tcns/key.tscn" id="16_etri3"]
 [ext_resource type="PackedScene" uid="uid://c3mossyooeuoc" path="res://tcns/duende_preso.tscn" id="17_rlw8c"]
 
-[node name="1" type="Node2D"]
+[node name="1" type="Node2D" unique_id=1585231484]
 scale = Vector2(2, 2)
 script = ExtResource("1_x85js")
 
-[node name="tilemap" type="Node2D" parent="."]
+[node name="tilemap" type="Node2D" parent="." unique_id=1018586487]
 
-[node name="block" type="TileMap" parent="tilemap"]
+[node name="block" type="TileMap" parent="tilemap" unique_id=881704172]
 tile_set = ExtResource("2_x85js")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458766, 1, 0, 393230, 1, 0, 393229, 1, 0, 393228, 1, 0, 327692, 1, 0, 327693, 1, 0, 196620, 1, 0, 262156, 1, 0, 196621, 1, 0, 262157, 1, 0, 196622, 1, 0, 262158, 1, 0, 327694, 1, 0, 131085, 1, 0, 131086, 1, 0, 13, 1, 0, 65549, 1, 0, 14, 1, 0, 65550, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 131081, 1, 0, 196617, 1, 0, 262153, 1, 0, 131082, 1, 0, 196618, 1, 0, 262154, 1, 0, 327689, 1, 0, 327690, 1, 0, 393223, 1, 0, 131078, 1, 0, 196614, 1, 0, 262150, 1, 0, 327686, 1, 0, 393222, 1, 0, 131079, 1, 0, 196615, 1, 0, 262151, 1, 0, 327687, 1, 0, 65539, 1, 0, 131075, 1, 0, 196611, 1, 0, 262147, 1, 0, 327683, 1, 0, 65540, 1, 0, 131076, 1, 0, 196612, 1, 0, 262148, 1, 0, 327684, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 65548, 0, 0)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="tilemap"]
+[node name="TileMapLayer" type="TileMapLayer" parent="tilemap" unique_id=1151735746]
 tile_map_data = PackedByteArray("AAAAAAAABwAAAAAAAAAAAAEABwAAAAAAAAAAAAIABwAAAAAAAAAAAAMABwAAAAAAAAAAAAQABwAAAAAAAAAAAAUABwAAAAEAAAABAAAABwAAAAEAAAABAAEAAgAAAAAAAAABAAIAAgAAAAAAAAABAAMAAgAAAAAAAAABAAQAAgAAAAAAAAABAAUAAgAAAAAAAAABAAYAAgAAAAAAAAACAAAABwAAAAEAAAACAAEAAgAAAAAAAAACAAIAAgAAAAAAAAACAAMAAgAAAAAAAAACAAQAAgAAAAAAAAACAAUAAgAAAAAAAAACAAYAAgAAAAAAAAADAAAABwAAAAAAAAADAAEABwAAAAAAAAADAAIABwAAAAAAAAADAAMABwAAAAAAAAADAAQABwAAAAEAAAADAAUABwAAAAEAAAADAAYAAgAAAAAAAAAEAAAABwAAAAAAAAAEAAEABwAAAAAAAAAEAAIABwAAAAAAAAAEAAMABwAAAAAAAAAEAAQABwAAAAEAAAAEAAUABwAAAAEAAAAEAAYAAgAAAAAAAAAFAAAABwAAAAEAAAAFAAEAAgAAAAAAAAAFAAIAAgAAAAAAAAAFAAMAAgAAAAAAAAAFAAQAAgAAAAAAAAAFAAUAAgAAAAAAAAAFAAYAAgAAAAAAAAAGAAAABwAAAAEAAAAGAAEAAgAAAAAAAAAGAAMABwAAAAAAAAAGAAQABwAAAAAAAAAGAAUABwAAAAEAAAAGAAYABwAAAAEAAAAHAAAABwAAAAEAAAAHAAEAAgAAAAAAAAAHAAMABwAAAAAAAAAHAAQABwAAAAAAAAAHAAUABwAAAAEAAAAHAAYABwAAAAEAAAAIAAAABwAAAAEAAAAIAAEAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAAIAAYAAgAAAAAAAAAJAAAABwAAAAEAAAAJAAEAAgAAAAAAAAAJAAIABwAAAAAAAAAJAAMABwAAAAAAAAAJAAQABwAAAAEAAAAJAAUABwAAAAEAAAAJAAYAAgAAAAAAAAAKAAAABwAAAAEAAAAKAAEAAgAAAAAAAAAKAAIABwAAAAAAAAAKAAMABwAAAAAAAAAKAAQABwAAAAEAAAAKAAUABwAAAAEAAAAKAAYAAgAAAAAAAAALAAAABwAAAAEAAAALAAEAAgAAAAAAAAALAAIAAgAAAAAAAAALAAMAAgAAAAAAAAALAAQAAgAAAAAAAAALAAUAAgAAAAAAAAALAAYAAgAAAAAAAAAMAAAABwAAAAEAAAAMAAMABwAAAAAAAAAMAAQABwAAAAAAAAAMAAUABwAAAAEAAAAMAAYABwAAAAEAAAANAAAABwAAAAAAAAANAAEABwAAAAAAAAANAAIABwAAAAAAAAANAAMABwAAAAAAAAANAAQABwAAAAAAAAANAAUABwAAAAEAAAANAAYABwAAAAEAAAAOAAAABwAAAAAAAAAOAAEABwAAAAAAAAAOAAIABwAAAAAAAAAOAAMABwAAAAAAAAAOAAQABwAAAAAAAAAOAAUABwAAAAEAAAAOAAYABwAAAAEAAAAOAAcABwAAAAAAAAANAAcABwAAAAAAAAAMAAcABwAAAAAAAAALAAcABwAAAAAAAAAKAAcABwAAAAAAAAAJAAcABwAAAAAAAAAIAAcABwAAAAAAAAAHAAcABwAAAAAAAAAGAAcABwAAAAAAAAAFAAcABwAAAAAAAAAEAAcABwAAAAAAAAADAAcABwAAAAAAAAACAAcABwAAAAAAAAABAAcABwAAAAAAAAAAAAcABwAAAAAAAAAAAAYABwAAAAEAAAD//wcAAgAAAAAAAAD//wYAAgAAAAAAAAD//wUAAgAAAAAAAAAGAAIABwAAAAAAAAAHAAIABwAAAAAAAAAMAAEAAgAAAAAAAAAMAAIAAgAAAAAAAAA=")
 tile_set = ExtResource("3_j6l6s")
 collision_enabled = false
 
-[node name="blockers" type="Node2D" parent="."]
+[node name="blockers" type="Node2D" parent="." unique_id=1943642520]
 
-[node name="PlayerF" parent="." instance=ExtResource("8_toqq8")]
+[node name="PlayerF" parent="." unique_id=677372604 instance=ExtResource("8_toqq8")]
 position = Vector2(48, 48)
 terrain_path = NodePath("../tilemap/block")
 
-[node name="die" type="CanvasLayer" parent="."]
+[node name="die" type="CanvasLayer" parent="." unique_id=1736264784]
 visible = false
 follow_viewport_enabled = true
 
-[node name="ColorRect" type="ColorRect" parent="die"]
+[node name="ColorRect" type="ColorRect" parent="die" unique_id=1972355217]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -47,7 +47,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="Control" type="VBoxContainer" parent="die"]
+[node name="Control" type="VBoxContainer" parent="die" unique_id=1013925714]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -59,13 +59,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="Label" type="Label" parent="die/Control"]
+[node name="Label" type="Label" parent="die/Control" unique_id=1871350437]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_clivc")
 theme_override_font_sizes/font_size = 96
 text = "Voce foi pego"
 
-[node name="Button" type="Button" parent="die/Control"]
+[node name="Button" type="Button" parent="die/Control" unique_id=644499194]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_clivc")
 theme_override_font_sizes/font_size = 64
@@ -75,7 +75,7 @@ theme_override_styles/hover = ExtResource("13_u8535")
 theme_override_styles/disabled = ExtResource("14_0833l")
 text = "Reiniciar"
 
-[node name="Button2" type="Button" parent="die/Control"]
+[node name="Button2" type="Button" parent="die/Control" unique_id=359336880]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_clivc")
 theme_override_font_sizes/font_size = 64
@@ -85,11 +85,11 @@ theme_override_styles/hover = ExtResource("13_u8535")
 theme_override_styles/disabled = ExtResource("14_0833l")
 text = "Voltar"
 
-[node name="win" type="CanvasLayer" parent="."]
+[node name="win" type="CanvasLayer" parent="." unique_id=1015872945]
 visible = false
 follow_viewport_enabled = true
 
-[node name="ColorRect" type="ColorRect" parent="win"]
+[node name="ColorRect" type="ColorRect" parent="win" unique_id=1508388221]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -97,7 +97,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="Control" type="VBoxContainer" parent="win"]
+[node name="Control" type="VBoxContainer" parent="win" unique_id=1942267911]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -109,13 +109,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="Label" type="Label" parent="win/Control"]
+[node name="Label" type="Label" parent="win/Control" unique_id=358661890]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_clivc")
 theme_override_font_sizes/font_size = 96
 text = "Voce salvou o duende"
 
-[node name="Button2" type="Button" parent="win/Control"]
+[node name="Button2" type="Button" parent="win/Control" unique_id=1018150249]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_clivc")
 theme_override_font_sizes/font_size = 64
@@ -125,10 +125,10 @@ theme_override_styles/hover = ExtResource("13_u8535")
 theme_override_styles/disabled = ExtResource("14_0833l")
 text = "Voltar"
 
-[node name="start" type="CanvasLayer" parent="."]
+[node name="start" type="CanvasLayer" parent="." unique_id=2126935972]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="start"]
+[node name="ColorRect" type="ColorRect" parent="start" unique_id=846005585]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -136,13 +136,17 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="tester" parent="." instance=ExtResource("9_6ayok")]
+[node name="tester" parent="." unique_id=930061426 instance=ExtResource("9_6ayok")]
 
-[node name="key" parent="." instance=ExtResource("16_etri3")]
+[node name="key" parent="." unique_id=1892631092 instance=ExtResource("16_etri3")]
 position = Vector2(304, 208)
 
-[node name="duende_preso" parent="." instance=ExtResource("17_rlw8c")]
+[node name="duende_preso" parent="." unique_id=1946260889 instance=ExtResource("17_rlw8c")]
 position = Vector2(400, 48)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=969531746]
+position = Vector2(1424, -86)
+color = Color(0.3223625, 0.62103385, 0.7401486, 1)
 
 [connection signal="pressed" from="die/Control/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="die/Control/Button2" to="." method="_on_button_2_pressed"]

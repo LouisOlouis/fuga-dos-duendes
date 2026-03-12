@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3mossyooeuoc"]
+[gd_scene format=3 uid="uid://c3mossyooeuoc"]
 
 [ext_resource type="Texture2D" uid="uid://d2sy7t3rbd0d" path="res://sprites/duende-preso.png" id="1_3f0ir"]
 [ext_resource type="Script" uid="uid://cov6pyhr3ef1h" path="res://scripts/duende_preso.gd" id="1_ksvfr"]
+[ext_resource type="Texture2D" uid="uid://ct0wfg775ktoa" path="res://sprites/light2D-gradient.png" id="3_u06y1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ksvfr"]
 size = Vector2(32, 32)
@@ -9,45 +10,52 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u06y1"]
 size = Vector2(32, 32)
 
-[node name="duende_preso" type="Area2D"]
+[node name="duende_preso" type="Area2D" unique_id=859760679]
 script = ExtResource("1_ksvfr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1700727844]
 shape = SubResource("RectangleShape2D_ksvfr")
 debug_color = Color(0, 0.610235, 0.6389076, 0.41960785)
 
-[node name="laterais" type="Node2D" parent="."]
+[node name="laterais" type="Node2D" parent="." unique_id=851254581]
 
-[node name="l" type="Area2D" parent="laterais"]
+[node name="l" type="Area2D" parent="laterais" unique_id=796660392]
 position = Vector2(-32, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/l"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/l" unique_id=1520159739]
 shape = SubResource("RectangleShape2D_u06y1")
 debug_color = Color(0.62190795, 0.35339233, 1, 0.41960785)
 
-[node name="u" type="Area2D" parent="laterais"]
+[node name="u" type="Area2D" parent="laterais" unique_id=1285054793]
 position = Vector2(0, -32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/u"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/u" unique_id=1136372130]
 shape = SubResource("RectangleShape2D_u06y1")
 debug_color = Color(0.62190795, 0.35339233, 1, 0.41960785)
 
-[node name="r" type="Area2D" parent="laterais"]
+[node name="r" type="Area2D" parent="laterais" unique_id=530994416]
 position = Vector2(32, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/r"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/r" unique_id=1124186521]
 shape = SubResource("RectangleShape2D_u06y1")
 debug_color = Color(0.62190795, 0.35339233, 1, 0.41960785)
 
-[node name="d" type="Area2D" parent="laterais"]
+[node name="d" type="Area2D" parent="laterais" unique_id=1811731500]
 position = Vector2(0, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/d"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laterais/d" unique_id=1158420078]
 shape = SubResource("RectangleShape2D_u06y1")
 debug_color = Color(0.62190795, 0.35339233, 1, 0.41960785)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1548648511]
 texture = ExtResource("1_3f0ir")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=610109097]
+color = Color(1, 0.7176471, 0, 1)
+energy = 0.7
+shadow_enabled = true
+texture = ExtResource("3_u06y1")
+texture_scale = 0.25
 
 [connection signal="body_entered" from="laterais/l" to="." method="_on_l_body_entered"]
 [connection signal="body_exited" from="laterais/l" to="." method="_on_l_body_exited"]

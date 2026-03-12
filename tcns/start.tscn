@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://p3mlxwjdymq4"]
+[gd_scene format=3 uid="uid://p3mlxwjdymq4"]
 
 [ext_resource type="Script" uid="uid://5lqqalaijo0q" path="res://scripts/start.gd" id="1_6no06"]
 [ext_resource type="Texture2D" uid="uid://di5aevt74ldr1" path="res://sprites/5 - Sky_color.png" id="1_m3eb0"]
@@ -74,68 +74,68 @@ _data = {
 &"cutscene": SubResource("Animation_unb44")
 }
 
-[node name="Start" type="Node2D"]
+[node name="Start" type="Node2D" unique_id=1354169516]
 position = Vector2(0, -33)
 script = ExtResource("1_6no06")
 
-[node name="paralax" type="Node2D" parent="."]
+[node name="paralax" type="Node2D" parent="." unique_id=336135243]
 modulate = Color(0.932786, 0.9239034, 0.91503376, 1)
 position = Vector2(0, 68)
 
-[node name="ceu" type="Parallax2D" parent="paralax"]
+[node name="ceu" type="Parallax2D" parent="paralax" unique_id=1055659636]
 scroll_scale = Vector2(0.5, 0.5)
 repeat_size = Vector2(576, 416)
 repeat_times = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="paralax/ceu"]
+[node name="Sprite2D" type="Sprite2D" parent="paralax/ceu" unique_id=1346722230]
 scale = Vector2(2, 2)
 texture = ExtResource("1_m3eb0")
 centered = false
 
-[node name="nuvens2" type="Parallax2D" parent="paralax"]
+[node name="nuvens2" type="Parallax2D" parent="paralax" unique_id=716135626]
 scroll_scale = Vector2(0.6, 0.6)
 repeat_size = Vector2(576, 0)
 autoscroll = Vector2(-10, 0)
 repeat_times = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="paralax/nuvens2"]
+[node name="Sprite2D" type="Sprite2D" parent="paralax/nuvens2" unique_id=54777250]
 scale = Vector2(2, 2)
 texture = ExtResource("2_3x648")
 centered = false
 
-[node name="nuvens1" type="Parallax2D" parent="paralax"]
+[node name="nuvens1" type="Parallax2D" parent="paralax" unique_id=1152760003]
 scroll_scale = Vector2(0.7, 0.7)
 repeat_size = Vector2(576, 0)
 repeat_times = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="paralax/nuvens1"]
+[node name="Sprite2D" type="Sprite2D" parent="paralax/nuvens1" unique_id=1431169747]
 scale = Vector2(2, 2)
 texture = ExtResource("3_vyrxr")
 centered = false
 
-[node name="montanhas" type="Parallax2D" parent="paralax"]
+[node name="montanhas" type="Parallax2D" parent="paralax" unique_id=1770399304]
 scroll_scale = Vector2(0.85, 0.85)
 repeat_size = Vector2(576, 0)
 repeat_times = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="paralax/montanhas"]
+[node name="Sprite2D" type="Sprite2D" parent="paralax/montanhas" unique_id=55648992]
 scale = Vector2(2, 2)
 texture = ExtResource("4_nbxhb")
 centered = false
 
-[node name="arvores" type="Parallax2D" parent="paralax"]
+[node name="arvores" type="Parallax2D" parent="paralax" unique_id=528626959]
 scroll_scale = Vector2(0.9, 0.9)
 repeat_size = Vector2(576, 0)
 repeat_times = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="paralax/arvores"]
+[node name="Sprite2D" type="Sprite2D" parent="paralax/arvores" unique_id=700809290]
 scale = Vector2(2, 2)
 texture = ExtResource("5_dk1g3")
 centered = false
 
-[node name="inicio" type="CanvasLayer" parent="."]
+[node name="inicio" type="CanvasLayer" parent="." unique_id=1095263074]
 
-[node name="ColorRect" type="ColorRect" parent="inicio"]
+[node name="ColorRect" type="ColorRect" parent="inicio" unique_id=1640584084]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -143,7 +143,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="Control" type="VBoxContainer" parent="inicio"]
+[node name="Control" type="VBoxContainer" parent="inicio" unique_id=1658131577]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -158,7 +158,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="inicio/Control"]
+[node name="Label" type="Label" parent="inicio/Control" unique_id=1586154261]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -168,12 +168,12 @@ theme_override_font_sizes/font_size = 96
 text = "Fuga dos duendes
 "
 
-[node name="Control2" type="VBoxContainer" parent="inicio/Control"]
+[node name="Control2" type="VBoxContainer" parent="inicio/Control" unique_id=1056535213]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="sair" type="Button" parent="inicio/Control/Control2"]
+[node name="sair" type="Button" parent="inicio/Control/Control2" unique_id=904644608]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
@@ -186,9 +186,9 @@ theme_override_styles/hover = ExtResource("9_unb44")
 theme_override_styles/disabled = ExtResource("10_qy2u1")
 text = "  Jogar  "
 
-[node name="Cutscene" type="CanvasLayer" parent="."]
+[node name="Cutscene" type="CanvasLayer" parent="." unique_id=1711098880]
 
-[node name="Control" type="VBoxContainer" parent="Cutscene"]
+[node name="Control" type="VBoxContainer" parent="Cutscene" unique_id=1352590506]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -204,7 +204,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="Cutscene/Control"]
+[node name="Label" type="Label" parent="Cutscene/Control" unique_id=1932031030]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/outline_size = 1
@@ -212,7 +212,7 @@ theme_override_fonts/font = ExtResource("6_g0jbg")
 theme_override_font_sizes/font_size = 96
 text = "O papai noel e mau"
 
-[node name="Control2" type="VBoxContainer" parent="Cutscene"]
+[node name="Control2" type="VBoxContainer" parent="Cutscene" unique_id=473499652]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -228,7 +228,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="Cutscene/Control2"]
+[node name="Label" type="Label" parent="Cutscene/Control2" unique_id=1113438854]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/outline_size = 1
@@ -237,7 +237,7 @@ theme_override_font_sizes/font_size = 96
 text = "Salve os outros duendes
 invada as casas pelas chamines"
 
-[node name="Control3" type="VBoxContainer" parent="Cutscene"]
+[node name="Control3" type="VBoxContainer" parent="Cutscene" unique_id=1891265658]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -253,7 +253,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="Cutscene/Control3"]
+[node name="Label" type="Label" parent="Cutscene/Control3" unique_id=1550761911]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/outline_size = 1
@@ -261,14 +261,12 @@ theme_override_fonts/font = ExtResource("6_g0jbg")
 theme_override_font_sizes/font_size = 96
 text = "Fuja da cidade do polo norte"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=477939059]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_lnifi")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=71491916]
+libraries/ = SubResource("AnimationLibrary_lnifi")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=769693068]
 visible = false
 position = Vector2(0, 37)
 texture = ExtResource("12_5yu1e")

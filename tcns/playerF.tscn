@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dqrhmww01ye1o"]
+[gd_scene format=3 uid="uid://dqrhmww01ye1o"]
 
 [ext_resource type="Script" uid="uid://bsenro0lqfd3w" path="res://scripts/playerF.gd" id="1_iccjt"]
 [ext_resource type="Texture2D" uid="uid://cblbaim3xl7yl" path="res://sprites/duende-de-costas-andando.png" id="2_iip27"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dtsto4sudy73c" path="res://sprites/duende4.png" id="4_ikb3i"]
 [ext_resource type="Texture2D" uid="uid://dfoo76vtxjx0x" path="res://sprites/duende3.png" id="5_fxgjc"]
 [ext_resource type="Texture2D" uid="uid://b0iu1yg3uyweu" path="res://sprites/duende1.png" id="6_1g1ww"]
+[ext_resource type="Texture2D" uid="uid://ct0wfg775ktoa" path="res://sprites/light2D-gradient.png" id="8_ikb3i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pd07"]
 size = Vector2(30, 30)
@@ -97,14 +98,21 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="PlayerF" type="CharacterBody2D"]
+[node name="PlayerF" type="CharacterBody2D" unique_id=341400893]
 script = ExtResource("1_iccjt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=318886278]
 shape = SubResource("RectangleShape2D_4pd07")
 debug_color = Color(0, 0.6, 0.69803923, 0.28627452)
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1515128927]
 sprite_frames = SubResource("SpriteFrames_iip27")
 animation = &"frente"
 autoplay = "frente"
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1602560419]
+color = Color(1, 0.7176471, 0, 1)
+energy = 0.8
+shadow_enabled = true
+texture = ExtResource("8_ikb3i")
+texture_scale = 0.5

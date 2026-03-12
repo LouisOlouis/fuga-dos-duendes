@@ -9,7 +9,6 @@ var steps = 0
 var inside_camera = false
 
 func _ready() -> void:
-	Music.stream.loop = true
 	canvas_layer_2.visible = true
 	var tween = get_tree().create_tween()
 	tween.tween_property(color_rect, "color", Color(0.0, 0.0, 0.0, 0.0), 0.5) 

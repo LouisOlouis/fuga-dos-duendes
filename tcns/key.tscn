@@ -1,17 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://udpgiymj5kro"]
+[gd_scene format=3 uid="uid://udpgiymj5kro"]
 
 [ext_resource type="Script" uid="uid://b2lxihk1udov" path="res://scripts/key.gd" id="1_j7d8o"]
 [ext_resource type="Texture2D" uid="uid://dqgpy86enppu6" path="res://sprites/chave.png" id="2_s3wlv"]
+[ext_resource type="Texture2D" uid="uid://ct0wfg775ktoa" path="res://sprites/light2D-gradient.png" id="3_s3wlv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c2f8u"]
 
-[node name="key" type="Area2D"]
+[node name="key" type="Area2D" unique_id=129907296]
 script = ExtResource("1_j7d8o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2042690709]
 shape = SubResource("RectangleShape2D_c2f8u")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1391242489]
 texture = ExtResource("2_s3wlv")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1311483975]
+color = Color(1, 0.7176471, 0, 1)
+energy = 0.7
+shadow_enabled = true
+texture = ExtResource("3_s3wlv")
+texture_scale = 0.25
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

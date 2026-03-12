@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://p5cuf1fehfr6"]
+[gd_scene format=3 uid="uid://p5cuf1fehfr6"]
 
 [ext_resource type="Script" uid="uid://bw083dgh6ldky" path="res://scripts/scene.gd" id="1_yhs7v"]
 [ext_resource type="TileSet" uid="uid://cmvxick7uh3kv" path="res://etc/DEVscene.tres" id="2_pnwnl"]
@@ -134,36 +134,36 @@ sources/4 = SubResource("TileSetAtlasSource_u8535")
 sources/6 = SubResource("TileSetAtlasSource_0833l")
 sources/8 = SubResource("TileSetAtlasSource_v4jv1")
 
-[node name="7" type="Node2D"]
+[node name="7" type="Node2D" unique_id=967313653]
 scale = Vector2(2, 2)
 script = ExtResource("1_yhs7v")
 
-[node name="tilemap" type="Node2D" parent="."]
+[node name="tilemap" type="Node2D" parent="." unique_id=1403710317]
 
-[node name="block" type="TileMap" parent="tilemap"]
+[node name="block" type="TileMap" parent="tilemap" unique_id=249600409]
 tile_set = ExtResource("2_pnwnl")
 format = 2
 
-[node name="TileMapLayer" type="TileMapLayer" parent="tilemap"]
+[node name="TileMapLayer" type="TileMapLayer" parent="tilemap" unique_id=1896981303]
 tile_set = SubResource("TileSet_2wjab")
 collision_enabled = false
 
-[node name="deco" type="TileMapLayer" parent="tilemap"]
+[node name="deco" type="TileMapLayer" parent="tilemap" unique_id=1189630920]
 tile_set = ExtResource("12_0xne0")
 collision_enabled = false
 
-[node name="blockers" type="Node2D" parent="."]
+[node name="blockers" type="Node2D" parent="." unique_id=998242374]
 
-[node name="PlayerF" parent="." instance=ExtResource("13_0adev")]
+[node name="PlayerF" parent="." unique_id=1240159692 instance=ExtResource("13_0adev")]
 position = Vector2(208, 48)
 key_number = 2
 terrain_path = NodePath("../tilemap/block")
 
-[node name="die" type="CanvasLayer" parent="."]
+[node name="die" type="CanvasLayer" parent="." unique_id=106467932]
 visible = false
 follow_viewport_enabled = true
 
-[node name="ColorRect" type="ColorRect" parent="die"]
+[node name="ColorRect" type="ColorRect" parent="die" unique_id=432560549]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -171,7 +171,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="Control" type="VBoxContainer" parent="die"]
+[node name="Control" type="VBoxContainer" parent="die" unique_id=1655022554]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -183,13 +183,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="Label" type="Label" parent="die/Control"]
+[node name="Label" type="Label" parent="die/Control" unique_id=1832822237]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_ash3f")
 theme_override_font_sizes/font_size = 96
 text = "Voce foi pego"
 
-[node name="Button" type="Button" parent="die/Control"]
+[node name="Button" type="Button" parent="die/Control" unique_id=406608760]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_ash3f")
 theme_override_font_sizes/font_size = 64
@@ -199,7 +199,7 @@ theme_override_styles/hover = ExtResource("17_t2qxl")
 theme_override_styles/disabled = ExtResource("18_opxr1")
 text = "Reiniciar"
 
-[node name="Button2" type="Button" parent="die/Control"]
+[node name="Button2" type="Button" parent="die/Control" unique_id=1421307676]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_ash3f")
 theme_override_font_sizes/font_size = 64
@@ -209,11 +209,11 @@ theme_override_styles/hover = ExtResource("17_t2qxl")
 theme_override_styles/disabled = ExtResource("18_opxr1")
 text = "Voltar"
 
-[node name="win" type="CanvasLayer" parent="."]
+[node name="win" type="CanvasLayer" parent="." unique_id=1844085837]
 visible = false
 follow_viewport_enabled = true
 
-[node name="ColorRect" type="ColorRect" parent="win"]
+[node name="ColorRect" type="ColorRect" parent="win" unique_id=1065862816]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -221,7 +221,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="Control" type="VBoxContainer" parent="win"]
+[node name="Control" type="VBoxContainer" parent="win" unique_id=1350782745]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -233,13 +233,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="Label" type="Label" parent="win/Control"]
+[node name="Label" type="Label" parent="win/Control" unique_id=744150407]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_ash3f")
 theme_override_font_sizes/font_size = 96
 text = "Voce salvou o duende"
 
-[node name="win button" type="Button" parent="win/Control"]
+[node name="win button" type="Button" parent="win/Control" unique_id=1667908503]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_ash3f")
 theme_override_font_sizes/font_size = 64
@@ -249,10 +249,10 @@ theme_override_styles/hover = ExtResource("17_t2qxl")
 theme_override_styles/disabled = ExtResource("18_opxr1")
 text = "Voltar"
 
-[node name="start" type="CanvasLayer" parent="."]
+[node name="start" type="CanvasLayer" parent="." unique_id=851991292]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="start"]
+[node name="ColorRect" type="ColorRect" parent="start" unique_id=93583368]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -260,21 +260,25 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="tester" parent="." instance=ExtResource("19_xse3w")]
+[node name="tester" parent="." unique_id=1592781186 instance=ExtResource("19_xse3w")]
 
-[node name="key" parent="." instance=ExtResource("20_878jq")]
+[node name="key" parent="." unique_id=1676376238 instance=ExtResource("20_878jq")]
 position = Vector2(80, 48)
 
-[node name="key2" parent="." instance=ExtResource("20_878jq")]
+[node name="key2" parent="." unique_id=1484677729 instance=ExtResource("20_878jq")]
 position = Vector2(46.5, 77)
 
-[node name="camera" parent="." instance=ExtResource("21_fycu2")]
+[node name="camera" parent="." unique_id=1212535265 instance=ExtResource("21_fycu2")]
 position = Vector2(176, 80)
 rotation = -1.5707964
 
-[node name="duende_preso" parent="." instance=ExtResource("22_3p5gp")]
+[node name="duende_preso" parent="." unique_id=944082937 instance=ExtResource("22_3p5gp")]
 position = Vector2(400, 48)
 monitoring = false
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=755185601]
+position = Vector2(1424, -86)
+color = Color(0.3223625, 0.62103385, 0.7401486, 1)
 
 [connection signal="pressed" from="die/Control/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="die/Control/Button2" to="." method="_on_button_2_pressed"]

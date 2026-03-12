@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://d0eg05svuounm"]
+[gd_scene format=4 uid="uid://d0eg05svuounm"]
 
 [ext_resource type="Script" uid="uid://bw083dgh6ldky" path="res://scripts/scene.gd" id="1_bb8at"]
 [ext_resource type="TileSet" uid="uid://cmvxick7uh3kv" path="res://etc/DEVscene.tres" id="2_j5suk"]
@@ -22,35 +22,35 @@
 [ext_resource type="PackedScene" uid="uid://udpgiymj5kro" path="res://tcns/key.tscn" id="20_dc1xb"]
 [ext_resource type="PackedScene" uid="uid://c3mossyooeuoc" path="res://tcns/duende_preso.tscn" id="21_lq5xv"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7tjw"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gm7t"]
 texture = ExtResource("3_7jo5o")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aoopg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jgjqj"]
 texture = ExtResource("4_tv2mv")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlkxq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3y7cv"]
 texture = ExtResource("5_gfip8")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_teipq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxiwv"]
 texture = ExtResource("6_0qc31")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u8535"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iyw1r"]
 texture = ExtResource("7_qsxm8")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5phn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05wjt"]
 texture = ExtResource("8_imnof")
 texture_region_size = Vector2i(32, 32)
 1:4/0 = 0
@@ -102,69 +102,74 @@ texture_region_size = Vector2i(32, 32)
 0:6/0 = 0
 0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.032348633, -16, 16, -16, 16, 5.01412, 0, 5.046469)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0833l"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvvd4"]
 texture = ExtResource("9_54eht")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_om3ik"]
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ifj7b"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uu8p6"]
 texture = ExtResource("10_eg16q")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ifj7b")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 0:1/0 = 0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4jv1"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_81jbj"]
 texture = ExtResource("11_jbmtt")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_2wjab"]
+[sub_resource type="TileSet" id="TileSet_8kyia"]
 tile_size = Vector2i(32, 32)
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
-sources/3 = SubResource("TileSetAtlasSource_teipq")
-sources/0 = SubResource("TileSetAtlasSource_o7tjw")
-sources/1 = SubResource("TileSetAtlasSource_aoopg")
-sources/2 = SubResource("TileSetAtlasSource_tlkxq")
-sources/5 = SubResource("TileSetAtlasSource_y5phn")
-sources/7 = SubResource("TileSetAtlasSource_om3ik")
-sources/4 = SubResource("TileSetAtlasSource_u8535")
-sources/6 = SubResource("TileSetAtlasSource_0833l")
-sources/8 = SubResource("TileSetAtlasSource_v4jv1")
+sources/3 = SubResource("TileSetAtlasSource_kxiwv")
+sources/0 = SubResource("TileSetAtlasSource_8gm7t")
+sources/1 = SubResource("TileSetAtlasSource_jgjqj")
+sources/2 = SubResource("TileSetAtlasSource_3y7cv")
+sources/5 = SubResource("TileSetAtlasSource_05wjt")
+sources/7 = SubResource("TileSetAtlasSource_uu8p6")
+sources/4 = SubResource("TileSetAtlasSource_iyw1r")
+sources/6 = SubResource("TileSetAtlasSource_kvvd4")
+sources/8 = SubResource("TileSetAtlasSource_81jbj")
 
-[node name="2" type="Node2D"]
+[node name="2" type="Node2D" unique_id=1221792375]
 scale = Vector2(2, 2)
 script = ExtResource("1_bb8at")
 
-[node name="tilemap" type="Node2D" parent="."]
+[node name="tilemap" type="Node2D" parent="." unique_id=1836900169]
 
-[node name="block" type="TileMap" parent="tilemap"]
+[node name="block" type="TileMap" parent="tilemap" unique_id=1968088817]
 tile_set = ExtResource("2_j5suk")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458766, 1, 0, 393230, 1, 0, 196622, 1, 0, 262158, 1, 0, 327694, 1, 0, 131086, 1, 0, 13, 1, 0, 14, 1, 0, 65550, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 65538, 1, 0, 131074, 1, 0, 196610, 1, 0, 262146, 1, 0, 327682, 1, 0, 393220, 1, 0, 196612, 1, 0, 131076, 1, 0, 65540, 1, 0, 196613, 1, 0, 196614, 1, 0, 131078, 1, 0, 65542, 1, 0, 65541, 1, 0, 131077, 1, 0, 196615, 1, 0, 131079, 1, 0, 65543, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 196619, 1, 0, 196618, 1, 0, 196617, 1, 0, 196616, 1, 0, 393229, 1, 0, 65539, 1, 0)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="tilemap"]
-tile_map_data = PackedByteArray("AAAAAAAABwAAAAAAAAAAAAEABwAAAAAAAAAAAAIABwAAAAAAAAAAAAMABwAAAAAAAAAAAAQABwAAAAAAAAAAAAUABwAAAAEAAAABAAAABwAAAAEAAAACAAAABwAAAAEAAAADAAAABwAAAAAAAAAEAAAABwAAAAAAAAAFAAAABwAAAAEAAAAGAAAABwAAAAEAAAAHAAAABwAAAAEAAAAIAAAABwAAAAEAAAAJAAAABwAAAAEAAAAKAAAABwAAAAEAAAALAAAABwAAAAEAAAAMAAAABwAAAAEAAAANAAAABwAAAAAAAAAOAAAABwAAAAAAAAAOAAEABwAAAAAAAAAOAAIABwAAAAAAAAAOAAMABwAAAAAAAAAOAAQABwAAAAAAAAAOAAUABwAAAAEAAAAOAAYABwAAAAEAAAAOAAcABwAAAAAAAAANAAcABwAAAAAAAAAMAAcABwAAAAAAAAALAAcABwAAAAAAAAAKAAcABwAAAAAAAAAJAAcABwAAAAAAAAAIAAcABwAAAAAAAAAHAAcABwAAAAAAAAAGAAcABwAAAAAAAAAFAAcABwAAAAAAAAAEAAcABwAAAAAAAAADAAcABwAAAAAAAAACAAcABwAAAAAAAAABAAcABwAAAAAAAAAAAAcABwAAAAAAAAAAAAYABwAAAAEAAAABAAEAAgAAAAAAAAABAAIAAgAAAAAAAAABAAMAAgAAAAAAAAABAAQAAgAAAAAAAAABAAUAAgAAAAAAAAACAAUABwAAAAEAAAACAAQABwAAAAEAAAACAAMABwAAAAAAAAACAAIABwAAAAAAAAACAAEABwAAAAAAAAAEAAMABwAAAAEAAAAFAAMABwAAAAEAAAAHAAQABwAAAAEAAAAIAAQABwAAAAEAAAAJAAQABwAAAAEAAAAKAAQABwAAAAEAAAAKAAMABwAAAAAAAAAJAAMABwAAAAAAAAAIAAMABwAAAAAAAAAHAAMABwAAAAAAAAAHAAIABwAAAAAAAAAHAAEABwAAAAAAAAAGAAEABwAAAAAAAAAFAAEABwAAAAAAAAAEAAEABwAAAAAAAAAGAAIABwAAAAEAAAAFAAIABwAAAAEAAAAEAAIABwAAAAEAAAAGAAMABwAAAAEAAAABAAYAAgAAAAAAAAACAAYAAgAAAAAAAAADAAYAAgAAAAAAAAADAAUAAgAAAAAAAAADAAQAAgAAAAAAAAADAAMAAgAAAAAAAAADAAIAAgAAAAAAAAADAAEAAgAAAAAAAAAEAAQAAgAAAAAAAAAEAAUAAgAAAAAAAAAFAAUAAgAAAAAAAAAFAAQAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAUAAgAAAAAAAAAGAAYAAgAAAAAAAAAFAAYAAgAAAAAAAAAHAAYAAgAAAAAAAAAIAAYAAgAAAAAAAAAIAAUAAgAAAAAAAAAHAAUAAgAAAAAAAAAJAAUAAgAAAAAAAAAJAAYAAgAAAAAAAAAKAAYAAgAAAAAAAAALAAYAAgAAAAAAAAALAAUAAgAAAAAAAAAKAAUAAgAAAAAAAAAMAAYAAgAAAAAAAAAMAAUAAgAAAAAAAAANAAUAAgAAAAAAAAANAAQAAgAAAAAAAAAMAAQAAgAAAAAAAAALAAQAAgAAAAAAAAANAAMAAgAAAAAAAAAMAAMAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAANAAEAAgAAAAAAAAAMAAEAAgAAAAAAAAALAAEAAgAAAAAAAAAKAAEAAgAAAAAAAAAJAAEAAgAAAAAAAAAIAAEAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAEAAYAAgAAAAAAAAANAAYAAgAAAAAAAAALAAMAAgAAAAAAAAA=")
-tile_set = SubResource("TileSet_2wjab")
+[node name="TileMapLayer" type="TileMapLayer" parent="tilemap" unique_id=118943808]
+tile_map_data = PackedByteArray("AAAAAAAABwAAAAAAAAAAAAEABwAAAAAAAAAAAAIABwAAAAAAAAAAAAMABwAAAAAAAAAAAAQABwAAAAAAAAAAAAUABwAAAAEAAAABAAAABwAAAAEAAAACAAAABwAAAAAAAAADAAAABwAAAAAAAAAEAAAABwAAAAAAAAAFAAAABwAAAAEAAAAGAAAABwAAAAEAAAAHAAAABwAAAAEAAAAIAAAABwAAAAEAAAAJAAAABwAAAAEAAAAKAAAABwAAAAEAAAALAAAABwAAAAEAAAAMAAAABwAAAAEAAAANAAAABwAAAAEAAAAOAAAABwAAAAAAAAAOAAEABwAAAAAAAAAOAAIABwAAAAAAAAAOAAMABwAAAAAAAAAOAAQABwAAAAAAAAAOAAUABwAAAAEAAAAOAAYABwAAAAEAAAAOAAcABwAAAAAAAAANAAcABwAAAAAAAAAMAAcABwAAAAAAAAALAAcABwAAAAAAAAAKAAcABwAAAAAAAAAJAAcABwAAAAAAAAAIAAcABwAAAAAAAAAHAAcABwAAAAAAAAAGAAcABwAAAAAAAAAFAAcABwAAAAAAAAAEAAcABwAAAAAAAAADAAcABwAAAAAAAAACAAcABwAAAAAAAAABAAcABwAAAAAAAAAAAAcABwAAAAAAAAAAAAYABwAAAAEAAAABAAEAAgAAAAAAAAABAAIAAgAAAAAAAAABAAMAAgAAAAAAAAABAAQAAgAAAAAAAAABAAUAAgAAAAAAAAACAAUABwAAAAEAAAACAAQABwAAAAEAAAACAAMABwAAAAAAAAACAAIABwAAAAAAAAACAAEABwAAAAAAAAAEAAMABwAAAAEAAAAFAAMABwAAAAEAAAAHAAQABwAAAAEAAAAIAAQABwAAAAEAAAAJAAQABwAAAAEAAAAKAAQABwAAAAEAAAAKAAMABwAAAAAAAAAJAAMABwAAAAAAAAAIAAMABwAAAAAAAAAHAAMABwAAAAAAAAAHAAIABwAAAAAAAAAHAAEABwAAAAAAAAAGAAEABwAAAAAAAAAFAAEABwAAAAAAAAAEAAEABwAAAAAAAAAGAAIABwAAAAEAAAAFAAIABwAAAAEAAAAEAAIABwAAAAEAAAAGAAMABwAAAAEAAAABAAYAAgAAAAAAAAACAAYAAgAAAAAAAAADAAYAAgAAAAAAAAADAAUAAgAAAAAAAAADAAQAAgAAAAAAAAADAAMAAgAAAAAAAAADAAIAAgAAAAAAAAADAAEAAgAAAAAAAAAEAAQAAgAAAAAAAAAEAAUAAgAAAAAAAAAFAAUAAgAAAAAAAAAFAAQAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAUAAgAAAAAAAAAGAAYAAgAAAAAAAAAFAAYAAgAAAAAAAAAHAAYAAgAAAAAAAAAIAAYAAgAAAAAAAAAIAAUAAgAAAAAAAAAHAAUAAgAAAAAAAAAJAAUAAgAAAAAAAAAJAAYAAgAAAAAAAAAKAAYAAgAAAAAAAAALAAYAAgAAAAAAAAALAAUAAgAAAAAAAAAKAAUAAgAAAAAAAAAMAAYAAgAAAAAAAAAMAAUAAgAAAAAAAAANAAUAAgAAAAAAAAANAAQAAgAAAAAAAAAMAAQAAgAAAAAAAAALAAQAAgAAAAAAAAANAAMAAgAAAAAAAAAMAAMAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAANAAEAAgAAAAAAAAAMAAEAAgAAAAAAAAALAAEAAgAAAAAAAAAKAAEAAgAAAAAAAAAJAAEAAgAAAAAAAAAIAAEAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAEAAYAAgAAAAAAAAANAAYAAgAAAAAAAAALAAMAAgAAAAAAAAA=")
+tile_set = SubResource("TileSet_8kyia")
 collision_enabled = false
 
-[node name="deco" type="TileMapLayer" parent="tilemap"]
+[node name="deco" type="TileMapLayer" parent="tilemap" unique_id=821178945]
 tile_map_data = PackedByteArray("AAALAAMACAAAAAAAAAANAAYABgAAAAAAAAAEAAYABAAAAAAAAAA=")
 tile_set = ExtResource("12_0tlb2")
 collision_enabled = false
 
-[node name="blockers" type="Node2D" parent="."]
+[node name="blockers" type="Node2D" parent="." unique_id=2084550527]
 
-[node name="PlayerF" parent="." instance=ExtResource("13_1n3cf")]
+[node name="PlayerF" parent="." unique_id=600108394 instance=ExtResource("13_1n3cf")]
 position = Vector2(48, 48)
 terrain_path = NodePath("../tilemap/block")
 
-[node name="die" type="CanvasLayer" parent="."]
+[node name="die" type="CanvasLayer" parent="." unique_id=16385519]
 visible = false
 follow_viewport_enabled = true
 
-[node name="ColorRect" type="ColorRect" parent="die"]
+[node name="ColorRect" type="ColorRect" parent="die" unique_id=1216633111]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -172,7 +177,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="Control" type="VBoxContainer" parent="die"]
+[node name="Control" type="VBoxContainer" parent="die" unique_id=446357889]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -184,13 +189,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="Label" type="Label" parent="die/Control"]
+[node name="Label" type="Label" parent="die/Control" unique_id=1909021134]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_wdpfe")
 theme_override_font_sizes/font_size = 96
 text = "Voce foi pego"
 
-[node name="Button" type="Button" parent="die/Control"]
+[node name="Button" type="Button" parent="die/Control" unique_id=1696122257]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_wdpfe")
 theme_override_font_sizes/font_size = 64
@@ -200,7 +205,7 @@ theme_override_styles/hover = ExtResource("17_po8gd")
 theme_override_styles/disabled = ExtResource("18_pp4gi")
 text = "Reiniciar"
 
-[node name="Button2" type="Button" parent="die/Control"]
+[node name="Button2" type="Button" parent="die/Control" unique_id=316404425]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_wdpfe")
 theme_override_font_sizes/font_size = 64
@@ -210,11 +215,11 @@ theme_override_styles/hover = ExtResource("17_po8gd")
 theme_override_styles/disabled = ExtResource("18_pp4gi")
 text = "Voltar"
 
-[node name="win" type="CanvasLayer" parent="."]
+[node name="win" type="CanvasLayer" parent="." unique_id=1540802035]
 visible = false
 follow_viewport_enabled = true
 
-[node name="ColorRect" type="ColorRect" parent="win"]
+[node name="ColorRect" type="ColorRect" parent="win" unique_id=334339211]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -222,7 +227,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="Control" type="VBoxContainer" parent="win"]
+[node name="Control" type="VBoxContainer" parent="win" unique_id=1843250177]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -234,13 +239,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="Label" type="Label" parent="win/Control"]
+[node name="Label" type="Label" parent="win/Control" unique_id=365595822]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_wdpfe")
 theme_override_font_sizes/font_size = 96
 text = "Voce salvou o duende"
 
-[node name="Button2" type="Button" parent="win/Control"]
+[node name="Button2" type="Button" parent="win/Control" unique_id=887108728]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_wdpfe")
 theme_override_font_sizes/font_size = 64
@@ -250,10 +255,10 @@ theme_override_styles/hover = ExtResource("17_po8gd")
 theme_override_styles/disabled = ExtResource("18_pp4gi")
 text = "Voltar"
 
-[node name="start" type="CanvasLayer" parent="."]
+[node name="start" type="CanvasLayer" parent="." unique_id=1262473041]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="start"]
+[node name="ColorRect" type="ColorRect" parent="start" unique_id=1741420254]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -261,13 +266,17 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="tester" parent="." instance=ExtResource("19_q41oe")]
+[node name="tester" parent="." unique_id=2001195649 instance=ExtResource("19_q41oe")]
 
-[node name="key" parent="." instance=ExtResource("20_dc1xb")]
+[node name="key" parent="." unique_id=1955187778 instance=ExtResource("20_dc1xb")]
 position = Vector2(272, 48)
 
-[node name="duende_preso" parent="." instance=ExtResource("21_lq5xv")]
+[node name="duende_preso" parent="." unique_id=1384489113 instance=ExtResource("21_lq5xv")]
 position = Vector2(112, 48)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1354087340]
+position = Vector2(1424, -86)
+color = Color(0.3223625, 0.62103385, 0.7401486, 1)
 
 [connection signal="pressed" from="die/Control/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="die/Control/Button2" to="." method="_on_button_2_pressed"]
